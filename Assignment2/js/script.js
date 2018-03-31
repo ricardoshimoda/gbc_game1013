@@ -50,6 +50,22 @@ var percentageBar = function(){
     }
 };
 
-var transitionScene = function (scene1, scene2){
-    
+var transitionScene = function (sceneId1, sceneId2){
+    var scene1 = document.getElementById(sceneId1);
+    var scene2 = document.getElementById(sceneId2);
+    scene2.style.visibility = 'visible';
+    scene2.style.top = window.innerHeight;
+    mainTop = 0;
+    inter = setInterval(gradualTransition(scene1, scene2), 15);
+}
+
+var gradualTransition = function(scene1, scene2){
+    mainTop++;
+    scene1.style.top = (-1)*mainTop;
+    scene2.style.top = window.innerHeight + (-1)*mainTop;
+    if(scene2.style.top <= 0){
+        scene1.style.visibility = 'hidden';
+        scene2.style.top = 0;
+        clearInterval(inter);
+    }
 }
