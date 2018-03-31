@@ -11,8 +11,27 @@ html, body {
     height: 100%;
     margin: 0;
 }
+
+button{
+    opacity: 1 !important;
+    background-color: #FDC454;
+    color: #47525E;
+    font-family: Chewy;
+    font-size:30px;
+    text-align: center;
+    min-width: 300px;
+    margin-top: 30px;
+}
+button:hover{
+    opacity: 1 !important;
+    color: #FDC454;
+    background-color: #47525E;
+}
+
 .page{
+    position: absolute;
     visibility: hidden;
+    width:100%;
 }
 .container{
     width: 100%;
@@ -21,4 +40,7 @@ html, body {
     margin:0;
     top: 0px;
     left:0px;
+}
+.lastButton{
+    margin-bottom: 30px;
 }

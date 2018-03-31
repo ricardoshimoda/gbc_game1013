@@ -1,14 +1,31 @@
 var inter = {};
 var mainTop = 0;
+const step =10;
 
-window.onload = function()
+
+
+window.onload = function(){
+    //showStartScreen();
+    showAnyScreen('menu');
+}
+
+var showAnyScreen = function(name){
+    var screen = document.getElementById(name);
+    screen.style.visibility = 'visible';
+    screen.style.top = '0px';
+    screen.style.height = '100%';
+    screen.style.width = '100%';
+}
+
+var showStartScreen =  function()
 {
     var start = document.getElementById('start');
     start.style.height = '0px';
     start.style.visibility = 'visible';
     inter = this.setInterval(
         function(){
-            start.style.height = (mainTop++)+'px';
+            mainTop = mainTop+step;
+            start.style.height = (mainTop)+'px';
             if(parseInt(start.style.height) >= window.innerHeight){
                 start.style.height = '100%';
                 clearInterval(inter);
@@ -22,6 +39,7 @@ window.onload = function()
         ,10);
 
 };
+
 var currentFill = 0;
 var percentageBar = function(){
     var filler = document.getElementById('currentProgress');
@@ -54,18 +72,29 @@ var transitionScene = function (sceneId1, sceneId2){
     var scene1 = document.getElementById(sceneId1);
     var scene2 = document.getElementById(sceneId2);
     scene2.style.visibility = 'visible';
-    scene2.style.top = window.innerHeight;
+    console.log(window.innerHeight);
+    scene2.style.top = window.innerHeight + 'px';
+    scene2.style.height = window.innerHeight + 'px';
+    scene2.style.minHeight = window.innerHeight + 'px';
     mainTop = 0;
-    inter = setInterval(gradualTransition(scene1, scene2), 15);
+    var childrenOfScene1 = scene1.childNodes;
+    for(var ch = 0; ch < childrenOfScene1.length; ch++) {
+        if(childrenOfScene1[ch].style != undefined){
+            childrenOfScene1[ch].style.visibility = 'hidden';
+        }
+    }
+    inter = setInterval(gradualTransition, 5,scene1,scene2);
 }
 
 var gradualTransition = function(scene1, scene2){
+    console.log('whatthebuck');
     mainTop++;
-    scene1.style.top = (-1)*mainTop;
-    scene2.style.top = window.innerHeight + (-1)*mainTop;
-    if(scene2.style.top <= 0){
+    //mainTop =mainTop + step ;
+    scene1.style.top = ((-1) * mainTop )+'px';
+    scene2.style.top = (window.innerHeight + (-1)*mainTop)+'px';
+    if(parseInt(scene2.style.top) <= 0){
         scene1.style.visibility = 'hidden';
-        scene2.style.top = 0;
+        scene2.style.top = '0px';
         clearInterval(inter);
     }
 }

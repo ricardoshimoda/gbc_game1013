@@ -1,4 +1,69 @@
 .menu{
-    background-image: url('../img/BeggingPuppy.png');
+    background-image: url('../img/mainbackwithout.png');
     background-color: black;
+    background-size:cover;
 }
+
+#header{
+    margin-top: 25px;
+    width: 100%;
+}
+
+#leftspacer{
+    min-width: 30%;
+    width:30%;
+    float:left;
+}
+
+#title{
+    min-width: 70%;
+    width: 70%;
+    float: left;
+    font-family: chewy;
+    font-size:50px;
+    color: #0077FF;
+    text-align: center;
+}
+#character{
+    min-width: 30%;
+    width:30%;
+    float:left;
+    margin-top: 80px;
+}
+.characterIcon{
+    width:90%;
+}
+#menuContainer{
+    margin-top: 20px;
+    float:left;
+    min-width: 70%;
+    width: 70%;
+}
+#menuButtons{
+    background: rgba(255, 255, 255, 0.5);
+    width: 80%;
+    min-width: 80%;
+    margin:auto;
+    text-align: center;    
+}
+
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite alternate;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite alternate;
+  }
+  @keyframes blink-animation {
+    from{
+        color:0077FF
+    }
+    to {
+        color: #FFE700;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    from{
+        color:0077FF
+    }
+    to {
+      color: #FFE700;
+    }
+  }
