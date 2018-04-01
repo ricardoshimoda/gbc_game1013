@@ -45,3 +45,38 @@ button:hover{
 .lastButton{
     margin-bottom: 30px;
 }
+
+.blank{
+    background-color: black;
+}
+
+.bigHeader{
+    width:100%;
+    min-width: 100%;
+    font-family: chewy;
+    font-size:50px;
+    color: #FDC454;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.menu{
+    background-image: url('../img/mainbackwithout.png');
+    background-color: black;
+    background-size:cover;
+}
+
+.header{
+    margin-top: 25px;
+    width: 100%;
+}
+
+.leftspacer{
+    min-width: 30%;
+    width:30%;
+    float:left;
+}
+
+.topspacer{
+    height:250px;
+}

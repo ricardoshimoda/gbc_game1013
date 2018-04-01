@@ -1,0 +1,23 @@
+.settingsContainer{
+    margin-top: 20px;
+    float:left;
+    min-width: 70%;
+    width: 70%;
+}
+.settingsPlaceholder{
+    background: rgba(255, 255, 255, 0.5);
+    width: 85%;
+    min-width: 85%;
+    margin:auto;
+    text-align: center;    
+    
+}
+.settingsTitle{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-width: 100%;
+    width: 100%;
+    font-family: chewy;
+    font-size:50px;
+    color:#343F4B;    
+}

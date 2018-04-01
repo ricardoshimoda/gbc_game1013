@@ -4,6 +4,9 @@
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/menu.css" rel="stylesheet" />
     <link href="css/loading.css" rel="stylesheet" />
+    <link href="css/quit.css" rel="stylesheet" />
+    <link href="css/settings.css" rel="stylesheet" />
+    <link href="css/credits.css" rel="stylesheet" />
     <link rel="icon" href="img/icon.ico">
 </head>
 <body>
@@ -30,8 +33,8 @@
             </div>
         </div>
         <div id="menu" class="menu page">
-            <div id="header">
-                <div id="leftspacer">&nbsp;</div>
+            <div class="header">
+                <div class="leftspacer">&nbsp;</div>
                 <div id="title" class="blink">
                     The uncanny adventures <br/> of Salaryman Joe
                 </div>
@@ -40,19 +43,77 @@
                 <img class = "characterIcon" src="img/Joe.png" />
             </div>
             <div id="menuContainer">
-                <div id="tranparentMenuButtons">
-                    &nbsp;
-                </div>
                 <div id ="menuButtons">
-                    <button >NEW GAME</button> <br />
-                    <button >LOAD GAME</button> <br />
-                     <button >SETTINGS</button> <br />
-                    <button >CREDITS</button> <br />
-                    <button class="lastButton">QUIT</button> <br />
+                    <button id="btnNewGame">NEW GAME</button> <br />
+                    <button id="btnLoadGame">LOAD GAME</button> <br />
+                    <button id="btnSettings">SETTINGS</button> <br />
+                    <button id="btnCredits">CREDITS</button> <br />
+                    <button id="btnQuit" class="lastButton">QUIT</button> <br />
+                </div>
+            </div>
+        </div>
+        <div id="quit" class="blank page">
+            <div class="bigHeader">
+                Bye!
+            </div>
+            <div id = "gallery" class="charGallery">
+                <img src="img/Joe.png" class="finalGallery" />
+                <img src="img/Nick.png" class="finalGallery" />
+                <img src="img/Mary.png" class="finalGallery" />
+                <img src="img/Linda.png" class="finalGallery" />
+                <img src="img/Jack.png" class="finalGallery" />
+            </div>
+        </div>
+        <div id="credits" class="menu page">
+            <div class="header">
+                <div class="leftspacer">
+                    <div class="topspacer">&nbsp;</div>
+                    <div>
+                        <img class = "characterIcon" src="img/Joe.png" />
+                    </div>
+                </div>
+                <div class="settingsContainer">                    
+                    <div class ="settingsPlaceholder">
+                        <div class="settingsTitle"> 
+                            Credits
+                        </div>
+                        <textarea id="txtCredits">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim porttitor mattis. Praesent ac purus pulvinar, lacinia odio pharetra, tincidunt justo. 
+
+Maecenas tempor orci eu lorem faucibus tempor. Praesent pretium congue lacus, nec sodales dolor consequat nec. 
+
+Praesent pharetra felis id est viverra ornare. Nunc consequat turpis dui, malesuada luctus massa posuere id. 
+
+Nulla semper ligula eget diam vulputate aliquam. Integer vel interdum tortor, vel auctor nulla. 
+
+Phasellus dictum ultricies turpis ut iaculis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+
+Mauris ornare rhoncus eros. Quisque malesuada nisl eu rutrum finibus. Aliquam vestibulum nisi et purus dignissim bibendum. 
+
+Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ultrices fringilla.
+                        </textarea>
+                        <button id="btnBackCreditsMenu" class="lastButton">BACK TO START SCREEN</button> <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="newGame" class="menu page">
+            <div class="header">
+                <div class="leftspacer">
+                    <div class="topspacer">&nbsp;</div>
+                    <div>
+                        <img class = "characterIcon" src="img/Joe.png" />
+                    </div>
+                </div>
+                <div class="settingsContainer">                    
+                    <div class ="settingsPlaceholder">
+                        <button id="btnBackCreditsMenu" class="lastButton">BACK TO START SCREEN</button> <br />
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/credits.js"></script>
 </html>

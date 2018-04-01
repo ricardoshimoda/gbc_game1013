@@ -1,12 +1,11 @@
 var inter = {};
 var mainTop = 0;
 const step =10;
-
-
+var previousScene = '';
 
 window.onload = function(){
     //showStartScreen();
-    showAnyScreen('menu');
+    showAnyScreen('newGame');
 }
 
 var showAnyScreen = function(name){
@@ -64,11 +63,12 @@ var percentageBar = function(){
     }
     if(currentFill > 100){
         clearInterval(inter);
-        transitionScene('start','menu');
+        transitionScene('start','menu', true);
     }
 };
 
-var transitionScene = function (sceneId1, sceneId2){
+var transitionScene = function (sceneId1, sceneId2, hide){
+    previousScene = sceneId1; /* just in case */
     var scene1 = document.getElementById(sceneId1);
     var scene2 = document.getElementById(sceneId2);
     scene2.style.visibility = 'visible';
@@ -77,10 +77,12 @@ var transitionScene = function (sceneId1, sceneId2){
     scene2.style.height = window.innerHeight + 'px';
     scene2.style.minHeight = window.innerHeight + 'px';
     mainTop = 0;
-    var childrenOfScene1 = scene1.childNodes;
-    for(var ch = 0; ch < childrenOfScene1.length; ch++) {
-        if(childrenOfScene1[ch].style != undefined){
-            childrenOfScene1[ch].style.visibility = 'hidden';
+    if(hide){
+        var childrenOfScene1 = scene1.childNodes;
+        for(var ch = 0; ch < childrenOfScene1.length; ch++) {
+            if(childrenOfScene1[ch].style != undefined){
+                childrenOfScene1[ch].style.visibility = 'hidden';
+            }
         }
     }
     inter = setInterval(gradualTransition, 5,scene1,scene2);

@@ -1,0 +1,11 @@
+
+.finalGallery{
+    height:150px;
+}
+.charGallery{
+    width:100%;
+    min-width: 100%;
+    margin:auto;
+    text-align: center;   
+    margin-top:200px;
+}
