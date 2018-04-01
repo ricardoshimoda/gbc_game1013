@@ -12,6 +12,7 @@ html, body {
     margin: 0;
 }
 
+
 button{
     opacity: 1 !important;
     background-color: #FDC454;
@@ -19,7 +20,7 @@ button{
     font-family: Chewy;
     font-size:30px;
     text-align: center;
-    min-width: 300px;
+    min-width: 80%;
     margin-top: 30px;
 }
 button:hover{

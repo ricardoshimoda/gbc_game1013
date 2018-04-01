@@ -41,8 +41,8 @@
 }
 #menuButtons{
     background: rgba(255, 255, 255, 0.5);
-    width: 80%;
-    min-width: 80%;
+    width: 75%;
+    min-width: 75%;
     margin:auto;
     text-align: center;    
 }
