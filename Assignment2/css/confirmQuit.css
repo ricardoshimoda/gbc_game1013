@@ -1,0 +1,16 @@
+.choiceCharacter{
+    background-image: url('../img/confirmback.png');
+    width: 80%;
+    height: 400px;
+    margin:auto;
+    text-align: center;
+    background-size:cover;
+}
+.buttonCharacter{
+    height:200px;
+}
+.choiceContainer{
+    margin-top:122px;
+    float:left;
+    width:50%;
+}

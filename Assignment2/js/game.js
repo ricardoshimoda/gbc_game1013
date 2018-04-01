@@ -28,3 +28,5 @@ var goingPlaces = function(event){
 var setGame = function(){
     window.addEventListener('keydown',goingPlaces);
 };
+
+

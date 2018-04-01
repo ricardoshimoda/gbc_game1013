@@ -11,8 +11,10 @@
     <link href="css/newGame.css" rel="stylesheet" />
     <link href="css/loadGame.css" rel="stylesheet" />
     <link href="css/charging.css" rel="stylesheet" />
-    <link href="css/game.css" rel="stylesheet" />    
+    <link href="css/game.css" rel="stylesheet" />
     <link href="css/death.css" rel="stylesheet" />    
+    <link href="css/pause.css" rel="stylesheet" />    
+    <link href="css/confirmQuit.css" rel="stylesheet" />    
 </head>
 <body>
     <div class="container">
@@ -327,7 +329,7 @@ Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ult
                 <div id="chargingText">Loading resources... </div>
             </div>
         </div>
-        <div id="death"class="blank page">
+        <div id="death" class="blank page">
             <div class="bigHeader">
                 Oh no! You have died!!!
             </div>
@@ -338,6 +340,49 @@ Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ult
                 <button id="btnBackDeathMenu" class="halfButton lastButton">Back to Main Menu</button> 
                 <button id="btnContinueDeathCharging" class="halfButton lastButton">Continue</button> 
                 <br />
+            </div>
+        </div>
+        <div id="confirmQuit" class="blank page">
+            <div class="bigHeader">
+                Progress will be lost!
+                Do you want to exit?
+            </div>
+            <div class="choiceCharacter">
+                <div class="choiceContainer">
+                    <img src="img/happyJoe.png" class="buttonCharacter"/>
+                    <button id="btnBackPauseMenu" class="lastButton">No</button>                    
+                </div>
+                <div class="choiceContainer">
+                    <img src="img/walkingJoe.png"  class="buttonCharacter"/>
+                    <button id="btnContinueMainMenu" class="lastButton">Yes</button>                     
+                </div>
+                <br />
+            </div>
+        </div>
+        <div id="pauseMenu" class="menu page">
+            <div class="pauseControl">
+                <div class="pauseTitle">Pause</div>
+                <div class="innerStatus">
+                    <div class = "playerStatus">
+                        <img src="img/HappyJoe.png" class="playerIcon" >
+                        <p>Status: Alive and kicking</p>
+                        <p>Resources: $400000</p>
+                        <p>XP: Nimrod (400XP)</p>
+                        <p>Inventory: Pheasant</p>
+                    </div>
+                    <div class="pauseControls">
+                        <button class="pauseButtons" id="btnResumeGame">RESUME GAME</button> <br />
+                        <button class="pauseButtons" id="btnInventory">INVENTORY</button> <br />
+                        <button class="pauseButtons" id="btnMissions">MISSIONS</button> <br />
+                        <button class="pauseButtons" id="btnBudget">BUDGET</button> <br />
+                        <button class="pauseButtons" id="btnTraits" >TRAITS</button> <br />
+                        <button class="pauseButtons" id="btnSettings">SETTINGS</button> <br />
+                        <button class="pauseButtons" id="btnStatistics">STATISTICS</button> <br />
+                        <button class="pauseButtons" id="btnPauseQuit" class="lastButton">QUIT GAME</button> <br />
+                        <br />
+                    </div>
+                </div>
+                <div class="pauseBottom">&nbsp;</div>
             </div>
         </div>
         <div id="settings" class="menu page">
@@ -380,4 +425,6 @@ Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ult
     <script type="text/javascript" src="js/settings.js"></script>
     <script type="text/javascript" src="js/game.js"></script>
     <script type="text/javascript" src="js/death.js"></script>
+    <script type="text/javascript" src="js/pause.js"></script>
+    <script type="text/javascript" src="js/confirmQuit.js"></script>
 </html>

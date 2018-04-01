@@ -5,7 +5,7 @@ var previousScene = '';
 
 window.onload = function(){
     //showStartScreen();
-    showAnyScreen('death');
+    showAnyScreen('confirmQuit');
 }
 
 var showAnyScreen = function(name){
