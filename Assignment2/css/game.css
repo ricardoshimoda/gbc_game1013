@@ -1,0 +1,16 @@
+.game{
+    background-image: url('../img/game.png');
+    background-color: black;
+    background-size:cover;
+}
+.gameKeys{
+    font-size:60px;
+    font-family: chewy;
+    color: #FDC454;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top:200px;
+    margin-left:auto;
+    margin-right: auto;
+    text-align: left;
+    width: 80%;
+}

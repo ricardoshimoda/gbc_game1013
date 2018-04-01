@@ -17,21 +17,6 @@ var heroSelection = function(){
     printOverlay('selectedHeroOverlay', this.childNodes);
 };
 
-var removeOverlay = function(overlayName){
-    var affectedOverlays = document.getElementsByClassName(overlayName);
-    for(var ovl = 0; ovl < affectedOverlays.length; ovl++){
-        affectedOverlays[ovl].style.display='none';
-    }
-}
-var printOverlay = function(overlayName, nodes){
-    for(var nds = 0; nds < nodes.length; nds++){
-        if(nodes[nds] != undefined && nodes[nds].className == overlayName){
-            nodes[nds].style.display='block';
-            break;
-        }
-    }
-}
-
 var powerOneSelection = function(){
     powerOneSelected = true;
     enablingGameButton();
@@ -52,16 +37,18 @@ for(var hcs = 0; hcs < heroControls.length; hcs++){
 
 var powerOneControls = document.getElementsByClassName('powerOne');
 for(var poc = 0; poc < powerOneControls.length; poc++){
-    console.log(poc);
     powerOneControls[poc].addEventListener('click',powerOneSelection);
 }
 
 var powerTwoControls = document.getElementsByClassName('powerTwo');
 for(var ptc = 0; ptc < powerTwoControls.length; ptc++){
-    console.log(ptc);
     powerTwoControls[ptc].addEventListener('click',powerTwoSelection);
 }
 
 document.getElementById('btnBackNewGameMenu').addEventListener('click',function(){
     transitionScene('newGame', 'menu');
+});
+
+document.getElementById('btnNewGameLoading').addEventListener('click', function(){
+    transitionScene('newGame', 'charging', false, chargingBegin);
 });

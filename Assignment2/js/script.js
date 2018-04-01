@@ -5,7 +5,7 @@ var previousScene = '';
 
 window.onload = function(){
     //showStartScreen();
-    showAnyScreen('newGame');
+    showAnyScreen('menu');
 }
 
 var showAnyScreen = function(name){
@@ -67,12 +67,11 @@ var percentageBar = function(){
     }
 };
 
-var transitionScene = function (sceneId1, sceneId2, hide){
+var transitionScene = function (sceneId1, sceneId2, hide, callback){
     previousScene = sceneId1; /* just in case */
     var scene1 = document.getElementById(sceneId1);
     var scene2 = document.getElementById(sceneId2);
     scene2.style.visibility = 'visible';
-    console.log(window.innerHeight);
     scene2.style.top = window.innerHeight + 'px';
     scene2.style.height = window.innerHeight + 'px';
     scene2.style.minHeight = window.innerHeight + 'px';
@@ -85,18 +84,42 @@ var transitionScene = function (sceneId1, sceneId2, hide){
             }
         }
     }
-    inter = setInterval(gradualTransition, 5,scene1,scene2);
-}
+    inter = setInterval(gradualTransition, 5,scene1,scene2,callback);
+};
 
-var gradualTransition = function(scene1, scene2){
-    console.log('whatthebuck');
+var isFunction = function (functionToCheck) {
+    return functionToCheck && {}.toString.call(functionToCheck) === '[object Function]';
+};
+
+var gradualTransition = function(scene1, scene2, onload){
     mainTop++;
-    //mainTop =mainTop + step ;
     scene1.style.top = ((-1) * mainTop )+'px';
     scene2.style.top = (window.innerHeight + (-1)*mainTop)+'px';
     if(parseInt(scene2.style.top) <= 0){
         scene1.style.visibility = 'hidden';
         scene2.style.top = '0px';
         clearInterval(inter);
+        if(isFunction(onload)){
+            onload();
+        }
     }
-}
+};
+
+var removeOverlay = function(overlayName){
+    var affectedOverlays = document.getElementsByClassName(overlayName);
+    for(var ovl = 0; ovl < affectedOverlays.length; ovl++){
+        affectedOverlays[ovl].style.display='none';
+    }
+};
+var printOverlay = function(overlayName, nodes, width){
+    for(var nds = 0; nds < nodes.length; nds++){
+        if(nodes[nds] != undefined && nodes[nds].className == overlayName){
+            if(width && width!=undefined){
+                nodes[nds].style.width = width+'px';
+            }
+            nodes[nds].style.display='block';
+            break;
+        }
+    }
+};
+

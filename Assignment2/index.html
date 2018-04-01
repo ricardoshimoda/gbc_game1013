@@ -9,6 +9,9 @@
     <link href="css/settings.css" rel="stylesheet" />
     <link href="css/credits.css" rel="stylesheet" />
     <link href="css/newGame.css" rel="stylesheet" />
+    <link href="css/loadGame.css" rel="stylesheet" />
+    <link href="css/charging.css" rel="stylesheet" />
+    <link href="css/game.css" rel="stylesheet" />    
 </head>
 <body>
     <div class="container">
@@ -92,7 +95,7 @@ Mauris ornare rhoncus eros. Quisque malesuada nisl eu rutrum finibus. Aliquam ve
 
 Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ultrices fringilla.
                         </textarea>
-                        <button id="btnBackCreditsMenu" class="lastButton">BACK TO START SCREEN</button> <br />
+                        <button id="btnBackCreditsMenu" class="lastButton">Back to Start Screen</button> <br />
                     </div>
                 </div>
             </div>
@@ -236,10 +239,130 @@ Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ult
                 </div>
             </div>
         </div>
+        <div id="loadGame" class="menu page">
+            <div class="header">
+                <div class="leftspacer">
+                    <div class="topspacer">&nbsp;</div>
+                    <div>
+                        <img class = "newGameCharacterIcon" src="img/Joe.png" />
+                    </div>
+                </div>
+                <div class="settingsContainer">                    
+                    <div class ="settingsPlaceholder">
+                        <div class="settingsTitle"> 
+                            Load Game
+                        </div>
+                        <div class="levels">
+                            <div class="levelContainer">
+                                <div class="selectedLevelOverlay"></div>                                
+                                <div class="pictureLevel">
+                                    <img src="img/DesertLevel.png" class="levelCapture" />
+                                </div>
+                                <div class ="levelDescription">Desert Hut - Feb 17 11:58 AM</div>
+                                <div class = "loadGameNowNow">
+                                    <button class="loadGameScreenButton">Go <img class="goButton" src="img/go.png"></button>
+                                </div>
+                            </div>
+                            <div class="levelContainer">
+                                <div class="selectedLevelOverlay"></div>
+                                <div class="pictureLevel">
+                                    <img src="img/BoulderLevel.png" class="levelCaptureW" />
+                                </div>
+                                <div class ="levelDescription">Boulder Escape - Feb 15 05:12 PM</div>
+                                <div class = "loadGameNowNow">
+                                    <button class="loadGameScreenButton">Go <img class="goButton" src="img/go.png"></button>
+                                </div>
+                            </div>
+                            <div class="levelContainer">
+                                <div class="selectedLevelOverlay"></div>                                
+                                <div class="pictureLevel">
+                                    <img src="img/SpaceLevel.png" class="levelCapture" />
+                                </div>
+                                <div class ="levelDescription">Science Lab - Feb 13 02:36 AM</div>
+                                <div class = "loadGameNowNow">
+                                    <button class="loadGameScreenButton">Go <img class="goButton" src="img/go.png"></button>
+                                </div>
+                            </div>
+                            <div class="levelContainer">
+                                <div class="selectedLevelOverlay"></div>                                
+                                <div class="pictureLevel">
+                                    <img src="img/GraveyardLevel.png" class="levelCapture" />
+                                </div>
+                                <div class ="levelDescription">Pet Semetary - Feb 09 04:36 AM</div>
+                                <div class = "loadGameNowNow">
+                                    <button class="loadGameScreenButton">Go <img class="goButton" src="img/go.png"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button id="btnBackLoadGameMenu" class="lastButton">Back to Start Screen</button>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id ="game" class = "game page">
+            <div class="gameKeys">
+                Press:
+                <ul>
+                    <li>d or D to go to the Death Screen</li>
+                    <li>p or P to go to the Pause Menu</li>
+                    <li>l or L to simulate Loading a new mission</li>
+                </ul>
+            </div>
+        </div>
+        <div id="charging" class="charging page">
+            <div class="upperLeftCharacter">
+                <img src="img/HappyJoe.png" class="chargingCharacter" />
+            </div>
+            <div class="upperRightTitle blink">
+                The uncanny adventures <br/> of Salaryman Joe
+            </div>
+            <div id="chargingEnsemble" class="bottom">
+                <div id="chargingBar">
+                    <div id="chargingProgress"></div>
+                </div>
+                <div id="chargingText">Loading resources... </div>
+            </div>
+        </div>
+        <div id="settings" class="menu page">
+            <div class="header">
+                <div class="leftspacer">
+                    <div class="topspacer">&nbsp;</div>
+                    <div>
+                        <img class = "newGameCharacterIcon" src="img/Joe.png" />
+                    </div>
+                </div>
+                <div class="settingsContainer">                    
+                    <div class ="settingsPlaceholder">
+                        <div id="currentSettingsTitle" class="settingsTitle">
+                            Gameplay Settings
+                        </div>
+                        <div id="Gameplay" class="configPlaceholder">
+
+                        </div>
+                        <div id="Access"  class="configPlaceholder"></div>
+                        <div id="Control"  class="configPlaceholder"></div>
+                        <div id="Audio"  class="configPlaceholder"></div>
+                        <div id="Graphics"  class="configPlaceholder"></div>
+                        <div>
+                            <button id="btnBackSettings" class="halfButton lastButton">Back</button> 
+                            <button id="btnNextSettings" class="halfButton lastButton">Next</button> 
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/menu.js"></script>
     <script type="text/javascript" src="js/credits.js"></script>
+    <script type="text/javascript" src="js/charging.js"></script>
     <script type="text/javascript" src="js/newGame.js"></script>
+    <script type="text/javascript" src="js/loadGame.js"></script>
+    <script type="text/javascript" src="js/settings.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
 </html>
