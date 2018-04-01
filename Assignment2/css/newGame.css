@@ -34,6 +34,25 @@
     position:absolute;
     display:none;
 }
+.selectedPowerOneOverlay{
+    background: rgba(0, 255, 0, 0.15);
+    top:0px;
+    left:0px;
+    height:95px;
+    width:150px;
+    position:absolute;
+    display:none;
+}
+.selectedPowerTwoOverlay{
+    background: rgba(0, 255, 0, 0.15);
+    top:0px;
+    left:0px;
+    height:95px;
+    width:150px;
+    position:absolute;
+    display:none;
+}
+
 /*
 .heroImage{
 
