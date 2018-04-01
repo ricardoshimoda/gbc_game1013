@@ -7,6 +7,7 @@
     <link href="css/quit.css" rel="stylesheet" />
     <link href="css/settings.css" rel="stylesheet" />
     <link href="css/credits.css" rel="stylesheet" />
+    <link href="css/newGame.css" rel="stylesheet" />
     <link rel="icon" href="img/icon.ico">
 </head>
 <body>
@@ -101,12 +102,126 @@ Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ult
                 <div class="leftspacer">
                     <div class="topspacer">&nbsp;</div>
                     <div>
-                        <img class = "characterIcon" src="img/Joe.png" />
+                        <img id="chosenCharacter" class = "newGameCharacterIcon" src="img/Question.png" />
                     </div>
                 </div>
                 <div class="settingsContainer">                    
                     <div class ="settingsPlaceholder">
-                        <button id="btnBackCreditsMenu" class="lastButton">BACK TO START SCREEN</button> <br />
+                        <div class="settingsTitle"> 
+                            Choose your character
+                        </div>
+                        <div id="characterChoice" class="powerLine charGalleryEnhanced">
+                            <div class="powerGalleryItem hero" hero="joe">
+                                <div class="selectedHeroOverlay"></div>
+                                <img src="img/Joe.png" class="newGameGallery"  />
+                            </div>
+                            <div class="powerGalleryItem hero" hero="Nick">
+                                <div class="selectedHeroOverlay"></div>
+                                <img src="img/Nick.png" class="newGameGallery"  />
+                            </div>
+                            <div class="powerGalleryItem hero" hero="Mary">
+                                <div class="selectedHeroOverlay"></div>
+                                <img src="img/Mary.png" class="newGameGallery"  />
+                            </div>
+                            <div class="powerGalleryItem hero" hero="Linda">
+                                <div class="selectedHeroOverlay"></div>
+                                <img src="img/Linda.png" class="newGameGallery"  />
+                            </div>
+                            <div class="powerGalleryItem hero" hero="Jack">
+                                <div class="selectedHeroOverlay"></div>
+                                <img src="img/Jack.png" class="newGameGallery"  />
+                            </div>
+                        </div>
+                        <div class="settingsTitle"> 
+                            Select two special powers
+                        </div>
+                        <div id="powerChoiceOne" class="powerLine charGalleryEnhanced">
+                            <div class="powerGalleryItem">
+                                <div>
+                                    <img src="img/clone.png" class="powerImage" />
+                                </div>
+                                <div>
+                                    Cloning                            
+                                </div>
+                            </div>
+                            <div class="powerGalleryItem">
+                                <div>
+                                    <img src="img/stamina.png" class="powerImage" />
+                                </div>
+                                <div>
+                                    Stamina
+                                </div>
+                            </div>
+                            <div class="powerGalleryItem">
+                                <div>
+                                    <img src="img/luck.png" class="powerImage" />
+                                </div>
+                                <div>
+                                    Luck
+                                </div>
+                            </div>
+                            <div class="powerGalleryItem">
+                                <div>
+                                    <img src="img/aim.png" class="powerImage" />
+                                </div>
+                                <div>
+                                    Aim
+                                </div>
+                            </div>
+                            <div class="powerGalleryItem">
+                                <div>
+                                    <img src="img/charisma.png" class="powerImage" />
+                                </div>
+                                <div>
+                                    Charisma
+                                </div>
+                            </div>
+                        </div>
+                        <div id="powerChoiceTwo" class="powerLine charGalleryEnhanced mt10">
+                            <div class="powerGalleryItem">
+                                <div>
+                                    <img src="img/fortune.png" class="powerImage"  />
+                                </div>
+                                <div>
+                                    Fortune
+                                </div>
+                            </div>
+                            <div class="powerGalleryItem">
+                                <div>
+                                    <img src="img/memory.png" class="powerImage" />
+                                </div>
+                                <div>
+                                    Memory
+                                </div>
+                            </div>
+                            <div class="powerGalleryItem">
+                                <div>
+                                    <img src="img/replay.png" class="powerImage" />
+                                </div>
+                                <div>
+                                    Replay
+                                </div>
+                            </div>
+                            <div class="powerGalleryItem">
+                                <div>
+                                    <img src="img/recovery.png" class="powerImage" />
+                                </div>
+                                <div>
+                                    Recovery
+                                </div>
+                            </div>
+                            <div class="powerGalleryItem">
+                                <div>
+                                    <img src="img/weather.png" class="powerImage" />
+                                </div>
+                                <div>
+                                    Weather
+                                </div>
+                            </div>
+                        </div>
+                        <button id="btnBackNewGameMenu" class="halfButton lastButton">Back to Start Screen</button> 
+                        <button id="btnNewGameLoading" class="halfButton lastButton" disabled>Let's Play!</button> 
+                        <br />
                     </div>
                 </div>
             </div>
@@ -116,4 +231,5 @@ Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ult
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/menu.js"></script>
     <script type="text/javascript" src="js/credits.js"></script>
+    <script type="text/javascript" src="js/newGame.js"></script>
 </html>
