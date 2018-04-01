@@ -13,7 +13,7 @@ document.getElementById('btnBudget').addEventListener('click', function(){
 document.getElementById('btnTraits').addEventListener('click', function(){
     transitionScene('pauseMenu', 'traits', false, setSettings);
 });
-document.getElementById('btnSettings').addEventListener('click', function(){
+document.getElementById('btnPauseSettings').addEventListener('click', function(){
     transitionScene('pauseMenu', 'settings', false, setSettings);
 });
 document.getElementById('btnStatistics').addEventListener('click', function(){

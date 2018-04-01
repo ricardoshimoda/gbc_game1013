@@ -5,7 +5,7 @@ var previousScene = '';
 
 window.onload = function(){
     //showStartScreen();
-    showAnyScreen('confirmQuit');
+    showAnyScreen('statistics');
 }
 
 var showAnyScreen = function(name){

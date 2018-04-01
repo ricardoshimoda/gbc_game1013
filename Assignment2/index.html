@@ -381,7 +381,7 @@ Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ult
                         <button class="pauseButtons" id="btnMissions">MISSIONS</button> <br />
                         <button class="pauseButtons" id="btnBudget">BUDGET</button> <br />
                         <button class="pauseButtons" id="btnTraits" >TRAITS</button> <br />
-                        <button class="pauseButtons" id="btnSettings">SETTINGS</button> <br />
+                        <button class="pauseButtons" id="btnPauseSettings">SETTINGS</button> <br />
                         <button class="pauseButtons" id="btnStatistics">STATISTICS</button> <br />
                         <button class="pauseButtons" id="btnPauseQuit" class="lastButton">QUIT GAME</button> <br />
                         <br />
@@ -418,12 +418,124 @@ Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ult
                 </div>
             </div>
         </div>
-        <div id="inventory">
+        <div id="inventory" class="menu page">
+            <div class="header">
+                <div class="leftspacer">
+                    <div class="topspacer">&nbsp;</div>
+                    <div>
+                        <img class = "characterIcon" src="img/Joe.png" />
+                    </div>
+                </div>
+                <div class="settingsContainer">                    
+                    <div class ="settingsPlaceholder">
+                        <div class="settingsTitle"> 
+                            Inventory
+                        </div>
+                        <button id="btnBackInventoryPauseMenu" class="lastButton">Back to Pause Menu</button> <br />
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="missions"></div>
-        <div id="budget"></div>
-        <div id="traits"></div>
-        <div id="statistics"></div>
+        <div id="missions" class="menu page">
+            <div class="header">
+                <div class="leftspacer">
+                    <div class="topspacer">&nbsp;</div>
+                    <div>
+                        <img class = "characterIcon" src="img/Joe.png" />
+                    </div>
+                </div>
+                <div class="settingsContainer">                    
+                    <div class ="settingsPlaceholder">
+                        <div class="settingsTitle"> 
+                            Missions
+                        </div>
+                        <button id="btnBackMissionsPauseMenu" class="lastButton">Back to Pause Menu</button> <br />
+                    </div>
+                </div>
+            </div>           
+        </div>
+        <div id="budget" class="menu page">
+            <div class="header">
+                <div class="leftspacer">
+                    <div class="topspacer">&nbsp;</div>
+                    <div>
+                        <img class = "characterIcon" src="img/Joe.png" />
+                    </div>
+                </div>
+                <div class="settingsContainer">                    
+                    <div class ="settingsPlaceholder">
+                        <div class="settingsTitle"> 
+                            Budget
+                        </div>
+                        <button id="btnBackBudgetPauseMenu" class="lastButton">Back to Pause Menu</button> <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="traits" class="menu page">
+            <div class="header">
+                <div class="leftspacer">
+                    <div class="topspacer">&nbsp;</div>
+                    <div>
+                        <img class = "characterIcon" src="img/Joe.png" />
+                    </div>
+                </div>
+                <div class="settingsContainer">                    
+                    <div class ="settingsPlaceholder">
+                        <div class="settingsTitle"> 
+                            Traits
+                        </div>
+                        <button id="btnBackTraitsPauseMenu" class="lastButton">Back to Pause Menu</button> <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="statistics" class="menu page">
+            <div class="header">
+                <div class="leftspacer">
+                    <div class="topspacer">&nbsp;</div>
+                    <div>
+                        <img class = "characterIcon" src="img/Joe.png" />
+                    </div>
+                </div>
+                <div class="settingsContainer">                    
+                    <div class ="settingsPlaceholder">
+                        <div class="settingsTitle"> 
+                            Statistics
+                        </div>
+                        <div class="facts">
+                            <p>Enemies Killed: 38603</p>
+                            <p>Deaths: 12684</p>
+                            <p>Hours played: 2179 (please get a life)</p>
+                            <p>Worst mission: Washi-Washi san (324 tries)</p>
+                            <p>Best mission: Good Morning USA (First try)</p>
+                            <p>Worst weapon: Machete (1 death)</p>
+                            <p>Best weapon: Scissor (28658 deaths)</p>
+                            <p>Classification: Nimrod</p>
+                        </div>
+                        <div class="frenemies">
+                            <div class="allies">
+                                Allies:
+                                <ul>
+                                    <li>The Gang of Four</li>
+                                    <li>Mc Escher</li>
+                                    <li>Paul Klee</li>
+                                </ul>
+                            </div>
+                            <div class="enemies">
+                                Enemies:
+                                <ul>
+                                    <li>The Dadaists of 5th ave.</li>
+                                    <li>Pop Top Connection</li>
+                                    <li>Duran Duran The Reflex</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button id="btnBackStatisticsPauseMenu" class="lastButton">Back to Pause Menu</button> <br />
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
     <script type="text/javascript" src="js/script.js"></script>
