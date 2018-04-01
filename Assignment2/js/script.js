@@ -5,7 +5,7 @@ var previousScene = '';
 
 window.onload = function(){
     //showStartScreen();
-    showAnyScreen('menu');
+    showAnyScreen('death');
 }
 
 var showAnyScreen = function(name){

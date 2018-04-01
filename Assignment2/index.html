@@ -12,6 +12,7 @@
     <link href="css/loadGame.css" rel="stylesheet" />
     <link href="css/charging.css" rel="stylesheet" />
     <link href="css/game.css" rel="stylesheet" />    
+    <link href="css/death.css" rel="stylesheet" />    
 </head>
 <body>
     <div class="container">
@@ -311,7 +312,7 @@ Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ult
                     <li>l or L to simulate Loading a new mission</li>
                 </ul>
             </div>
-        </div>
+        </div>        
         <div id="charging" class="charging page">
             <div class="upperLeftCharacter">
                 <img src="img/HappyJoe.png" class="chargingCharacter" />
@@ -324,6 +325,19 @@ Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ult
                     <div id="chargingProgress"></div>
                 </div>
                 <div id="chargingText">Loading resources... </div>
+            </div>
+        </div>
+        <div id="death"class="blank page">
+            <div class="bigHeader">
+                Oh no! You have died!!!
+            </div>
+            <div class="deathCharacter">
+                <img src="img/DeadJoe.png" class="iconDead" />
+            </div>
+            <div class="deathButtons">
+                <button id="btnBackDeathMenu" class="halfButton lastButton">Back to Main Menu</button> 
+                <button id="btnContinueDeathCharging" class="halfButton lastButton">Continue</button> 
+                <br />
             </div>
         </div>
         <div id="settings" class="menu page">
@@ -365,4 +379,5 @@ Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ult
     <script type="text/javascript" src="js/loadGame.js"></script>
     <script type="text/javascript" src="js/settings.js"></script>
     <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/death.js"></script>
 </html>
