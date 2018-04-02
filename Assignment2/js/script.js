@@ -5,7 +5,7 @@ var previousScene = '';
 
 window.onload = function(){
     //showStartScreen();
-    showAnyScreen('statistics');
+    showAnyScreen('traits');
 }
 
 var showAnyScreen = function(name){

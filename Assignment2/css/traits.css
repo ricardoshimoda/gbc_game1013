@@ -1,0 +1,61 @@
+.trait{
+    height:50px;
+    display: table;
+    width:100%;
+    margin-bottom:20px;
+}
+.traitTitle{
+    margin-left:20px;
+    text-align: left;
+    font-family: chewy;
+    font-size:20px;
+    color:#343F4B;
+}
+.traitScale{
+    font-family: chewy;
+    font-size:20px;
+    color:#343F4B;    
+}
+.traitClassification{
+    text-align: left;
+    margin-left:20px;
+    width:120px;
+    float:left;
+}
+.traitProgressBar{
+    float:left;
+    margin-left: 20px;
+}
+.traitButton{
+    float:right;
+    margin-right:20px;
+}
+.traitButtonAction{
+    font-size:20px !important; 
+    margin-top:-20px !important;
+}
+.traitProgressBarContainer{
+    padding-top:10px;
+}
+.traitProgressBar{
+    display: box;
+    min-height: 10px;
+    height:10px;
+    width: 65%;
+    background-color: white;
+    margin:auto;
+}
+.traitCurrentProgress{
+    min-height: 100%;
+    height:100%;
+    width: 10%;
+    background-color: grey;
+}
+.traitAvailable{
+    width:100%;
+    margin-top:20px;
+    font-family: chewy;
+    font-size:20px;
+    color:#343F4B;   
+    text-align: center; 
+}
