@@ -78,3 +78,38 @@
     text-align:left;
     margin-left:50px;
 }
+.controlTitle{
+    font-family: chewy;
+    font-size:30px;
+    color:#343F4B;
+    text-align: left;
+}
+.inTheMiddle{
+    width: 60%;
+    margin:auto;
+}
+.settingsFromEverywhere{
+    width:100%;
+    text-align: center;
+    margin-top: 10px;
+}
+.controlList{
+    font-family: chewy;
+    font-size:20px;
+    color:#343F4B;
+    text-align: left;
+    
+}
+.smallbutton{
+    margin-top:0px !important;
+    font-size:15px !important;
+    width:30px !important;
+    min-width: 30px !important;
+    display:none;
+}
+.controltxt{
+    width:30px;
+    min-width: 30px;
+    display:none;
+    height:18px;
+}

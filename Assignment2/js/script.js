@@ -4,8 +4,8 @@ const step =10;
 var previousScene = '';
 
 window.onload = function(){
-    //showStartScreen();
-    showAnyScreen('settings');
+    showStartScreen();
+    //showAnyScreen('settings');
 }
 
 var showAnyScreen = function(name){
