@@ -5,7 +5,7 @@ var previousScene = '';
 
 window.onload = function(){
     //showStartScreen();
-    showAnyScreen('budget');
+    showAnyScreen('missions');
 }
 
 var showAnyScreen = function(name){

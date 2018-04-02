@@ -1,0 +1,41 @@
+.missionControl{
+    text-align: left;
+    margin-left:20px;
+    font-family: chewy;
+    font-size:20px;
+    color:#343F4B;
+}
+.missionList{
+    width:50%;
+    float:left;
+}
+.missionDescription{
+    width:50%;
+    float:left;    
+}
+.missionIcon{
+    height: 70px;
+}
+.missionImage{
+    float:left;
+    width:100px;
+}
+.missionTitle{
+    float:left;
+}
+.missionHeader{
+    height: 80px;
+    width:100%;
+    display:table;
+    overflow-y: scroll;
+    position:relative;
+}
+.missionOverlay{
+    background: rgba(0, 255, 0, 0.15);
+    top:0px;
+    left:0px;
+    height:80px;
+    width:300px;
+    position:absolute;
+    display:none;
+}
