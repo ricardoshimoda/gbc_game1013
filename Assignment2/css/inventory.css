@@ -1,0 +1,47 @@
+.inventorySubTitle{
+    margin-top: 10px;
+    min-width: 100%;
+    width: 100%;
+    font-family: chewy;
+    font-size:25px;
+    color:#343F4B;    
+    text-align: left;
+    margin-left:30px;
+}
+.inventoryGallery{
+    /*width:120px;*/
+    height: 90px;
+}
+.inventoryDescription{
+    margin-top: 10px;
+    min-width: 100%;
+    width: 100%;
+    font-family: chewy;
+    font-size:20px;
+    color:#343F4B;    
+    text-align: left;
+    margin-left:30px;
+}
+#inventoryItemName{
+    font-family: chewy;
+    font-size:20px;
+    color:#343F4B;    
+    text-align: left;
+    font-weight: bold;
+}
+#inventoryItemDescription{
+    font-family: chewy;
+    font-size:20px;
+    color:#343F4B;    
+    text-align: left;
+}
+.selectedItemOverlay{
+    background: rgba(0, 255, 0, 0.15);
+    top:0px;
+    left:0px;
+    height:100px;
+    width:150px;
+    position:absolute;
+    display:none;
+
+}

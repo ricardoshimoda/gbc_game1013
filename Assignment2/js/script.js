@@ -5,7 +5,7 @@ var previousScene = '';
 
 window.onload = function(){
     //showStartScreen();
-    showAnyScreen('missions');
+    showAnyScreen('inventory');
 }
 
 var showAnyScreen = function(name){
