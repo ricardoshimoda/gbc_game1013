@@ -5,7 +5,7 @@ var previousScene = '';
 
 window.onload = function(){
     //showStartScreen();
-    showAnyScreen('traits');
+    showAnyScreen('budget');
 }
 
 var showAnyScreen = function(name){
