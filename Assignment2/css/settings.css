@@ -28,6 +28,15 @@
     font-size:50px;
     color:#343F4B;    
 }
+.radioOption{
+    float:left;
+}
+.radioOptionLabel{
+    font-family: chewy;
+    font-size:20px;
+    color:#343F4B;
+}
+.radioTitle,
 .sliderTitle{
     font-family: chewy;
     font-size:20px;
@@ -58,6 +67,10 @@
     text-align: right;
     margin-right:15px;
 }
+.radioEnsemble,
 .sliderEnsemble{
     height:100px;
+}
+.radioOptions{
+    margin-left:50px;
 }

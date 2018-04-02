@@ -15,10 +15,9 @@ var settingPlaceholder = [
 ];
 var backTo = '';
 
-setSettings();
 
 var setSettings = function (){
-    currentSettingIndex = 0;
+    currentSettingIndex = 1;
     backTo = previousScene;
     var setSettingsTitle = document.getElementById('currentSettingsTitle');
     setSettingsTitle.innerHTML = settingArray[currentSettingIndex];
@@ -54,3 +53,4 @@ var nextSettings = function(){
 
 document.getElementById('btnBackSettings').addEventListener('click', backSettings)
 document.getElementById('btnNextSettings').addEventListener('click', nextSettings)
+setSettings();
