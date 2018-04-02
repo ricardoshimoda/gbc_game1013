@@ -17,7 +17,7 @@ var backTo = '';
 
 
 var setSettings = function (){
-    currentSettingIndex = 1;
+    currentSettingIndex = 3;
     backTo = previousScene;
     var setSettingsTitle = document.getElementById('currentSettingsTitle');
     setSettingsTitle.innerHTML = settingArray[currentSettingIndex];
