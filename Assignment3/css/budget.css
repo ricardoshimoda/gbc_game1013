@@ -1,0 +1,15 @@
+.budgetDivisionBell{
+    text-align: left;
+    margin-left:20px;
+    font-family: chewy;
+    font-size:20px;
+    color:#343F4B;
+}
+.budgetControlsLeft{
+    float:left;
+    width:50%;
+}
+.budgetControlsRight{
+    float:left;
+    width:50%;
+}

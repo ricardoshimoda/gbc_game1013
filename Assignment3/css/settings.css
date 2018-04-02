@@ -1,0 +1,115 @@
+.settingsContainer{
+    margin-top: 20px;
+    float:left;
+    min-width: 70%;
+    width: 70%;
+}
+.settingsPlaceholder{
+    background: rgba(255, 255, 255, 0.5);
+    width: 85%;
+    min-width: 85%;
+    margin:auto;
+    text-align: center;    
+    
+}
+.settingsFromTheLeft{
+    width:50%;
+    float: left;
+}
+.settingsFromTheRight{
+    width:50%;
+    float: left;
+}
+.settingsTitle{
+    margin-bottom: 20px;
+    min-width: 100%;
+    width: 100%;
+    font-family: chewy;
+    font-size:50px;
+    color:#343F4B;    
+}
+.radioOption{
+    float:left;
+}
+.radioOptionLabel{
+    font-family: chewy;
+    font-size:20px;
+    color:#343F4B;
+}
+.radioTitle,
+.sliderTitle{
+    font-family: chewy;
+    font-size:20px;
+    color:#343F4B;
+    text-align: left;
+    margin-left:15px;
+    margin-bottom:10px;
+}
+.sliderItself{
+    width:50%;
+}
+.sliderScale{
+    width: 100%;
+}
+.sliderLeftScale{
+    float:left;
+    font-family: chewy;
+    font-size:15px;
+    color:#343F4B;
+    text-align: left;
+    margin-left:15px;
+}
+.sliderRightScale{
+    float:right;
+    font-family: chewy;
+    font-size:15px;
+    color:#343F4B;
+    text-align: right;
+    margin-right:15px;
+}
+.radioEnsemble,
+.sliderEnsemble{
+    height:100px;
+}
+.radioOptions{
+    margin-left:50px;
+}
+.comboSelecting{
+    text-align:left;
+    margin-left:50px;
+}
+.controlTitle{
+    font-family: chewy;
+    font-size:30px;
+    color:#343F4B;
+    text-align: left;
+}
+.inTheMiddle{
+    width: 60%;
+    margin:auto;
+}
+.settingsFromEverywhere{
+    width:100%;
+    text-align: center;
+    margin-top: 10px;
+}
+.controlList{
+    font-family: chewy;
+    font-size:20px;
+    color:#343F4B;
+    text-align: left;
+    
+}
+.smallbutton{
+    margin-top:0px !important;
+    font-size:15px !important;
+    width:30px !important;
+    min-width: 30px !important;
+    display:none;
+}
+.controltxt{
+    width:30px;
+    min-width: 30px;
+    display:none;
+    height:18px;
+}

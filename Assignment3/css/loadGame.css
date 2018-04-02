@@ -1,0 +1,52 @@
+.pictureLevel{
+    float:left;
+    width:80px;
+}
+.levelDescription{
+    float:left;
+    padding-left: 50px;
+    padding-top: 30px;
+    height:80px;
+}
+.levelContainer{
+    clear: both;
+    font-family: chewy;
+    font-size:25px;
+    color:#343F4B;
+    display: block-inline;
+    height:80px;
+    margin-top:10px;
+    width:100%;
+    position: relative;
+}
+.goButton{
+    height:20px;
+}
+.loadGameNowNow{
+    display:none;
+    float:right;
+    width:100px;
+    height:80px;
+}
+.levels{
+    display: block-inline;
+    margin-left:40px;
+}
+.levelCapture{
+    height:80px !important;
+}
+levelCaptureW{
+    width: 70px !important;
+}
+.loadGameScreenButton{
+    margin-top:20px !important;
+    margin-right: 20px !important;
+}
+.selectedLevelOverlay{
+    background: rgba(0, 255, 0, 0.15);
+    top:0px;
+    left:0px;
+    height:80px;
+    position:absolute;
+    display:none;    
+}

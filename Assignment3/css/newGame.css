@@ -1,0 +1,59 @@
+.charGalleryEnhanced{
+    background: rgba(255, 255, 255, 0.4);
+}
+.powerGalleryItem{
+    font-family: chewy;
+    font-size:30px;
+    color:#343F4B;
+    text-align: center;
+    float:left;
+    width: 150px;
+    position: relative;
+}
+.powerImage{
+    width:40px;
+    margin-top:6px;
+}
+.powerLine{
+    display: inline-table;
+}
+.newGameGallery{
+    height:130px;
+}
+
+.newGameCharacterIcon{
+    height:300px;
+}
+
+.selectedHeroOverlay{
+    background: rgba(0, 255, 0, 0.15);
+    top:0px;
+    left:0px;
+    height:140px;
+    width:150px;
+    position:absolute;
+    display:none;
+}
+.selectedPowerOneOverlay{
+    background: rgba(0, 255, 0, 0.15);
+    top:0px;
+    left:0px;
+    height:95px;
+    width:150px;
+    position:absolute;
+    display:none;
+}
+.selectedPowerTwoOverlay{
+    background: rgba(0, 255, 0, 0.15);
+    top:0px;
+    left:0px;
+    height:95px;
+    width:150px;
+    position:absolute;
+    display:none;
+}
+
+/*
+.heroImage{
+
+}*/

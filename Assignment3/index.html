@@ -1,0 +1,1066 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="icon" href="img/icon.ico">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/menu.css" rel="stylesheet" />
+    <link href="css/loading.css" rel="stylesheet" />
+    <link href="css/quit.css" rel="stylesheet" />
+    <link href="css/settings.css" rel="stylesheet" />
+    <link href="css/credits.css" rel="stylesheet" />
+    <link href="css/newGame.css" rel="stylesheet" />
+    <link href="css/loadGame.css" rel="stylesheet" />
+    <link href="css/charging.css" rel="stylesheet" />
+    <link href="css/game.css" rel="stylesheet" />
+    <link href="css/death.css" rel="stylesheet" />    
+    <link href="css/pause.css" rel="stylesheet" />    
+    <link href="css/confirmQuit.css" rel="stylesheet" />
+    <link href="css/inventory.css" rel="stylesheet" />
+    <link href="css/missions.css" rel="stylesheet" />
+    <link href="css/budget.css" rel="stylesheet" />
+    <link href="css/traits.css" rel="stylesheet" />
+    <link href="css/statistics.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div id="start" class="loading page">
+            <div id="topleftlogo" class="topleftlogo">
+                <img class="aframelogo" src="img/Aframelogo.png" />
+                <br />
+                <div class="aframemotto">
+                    Powered by Aframe and open source code
+                </div>
+            </div>
+            <div class="toprightlogo">
+                <img class = "studiologo" src="img/paw.png">
+                <span class="studiomotto">
+                    Begging Puppy Studios
+                </span>
+            </div>
+            <div id="progressEnsemble" class="bottom">
+                <div id="progressBar">
+                    <div id="currentProgress"></div>
+                </div>
+                <div id="loadingText">Loading resources... </div>
+            </div>
+        </div>
+        <div id="menu" class="menu page">
+            <div class="header">
+                <div class="leftspacer">&nbsp;</div>
+                <div id="title" class="blink">
+                    The uncanny adventures <br/> of Salaryman Joe
+                </div>
+            </div>
+            <div id="character">
+                <img class = "characterIcon" src="img/Joe.png" />
+            </div>
+            <div id="menuContainer">
+                <div id ="menuButtons">
+                    <button id="btnNewGame">NEW GAME</button> <br />
+                    <button id="btnLoadGame">LOAD GAME</button> <br />
+                    <button id="btnSettings">SETTINGS</button> <br />
+                    <button id="btnCredits">CREDITS</button> <br />
+                    <button id="btnQuit" class="lastButton">QUIT</button> <br />
+                </div>
+            </div>
+        </div>
+        <div id="quit" class="blank page">
+            <div class="bigHeader">
+                Bye!
+            </div>
+            <div id = "gallery" class="charGallery">
+                <img src="img/Joe.png" class="finalGallery" />
+                <img src="img/Nick.png" class="finalGallery" />
+                <img src="img/Mary.png" class="finalGallery" />
+                <img src="img/Linda.png" class="finalGallery" />
+                <img src="img/Jack.png" class="finalGallery" />
+            </div>
+        </div>
+        <div id="credits" class="menu page">
+            <div class="header">
+                <div class="leftspacer">
+                    <div class="topspacer">&nbsp;</div>
+                    <div>
+                        <img class = "characterIcon" src="img/Joe.png" />
+                    </div>
+                </div>
+                <div class="settingsContainer">                    
+                    <div class ="settingsPlaceholder">
+                        <div class="settingsTitle"> 
+                            Credits
+                        </div>
+                        <textarea id="txtCredits">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim porttitor mattis. Praesent ac purus pulvinar, lacinia odio pharetra, tincidunt justo. 
+
+Maecenas tempor orci eu lorem faucibus tempor. Praesent pretium congue lacus, nec sodales dolor consequat nec. 
+
+Praesent pharetra felis id est viverra ornare. Nunc consequat turpis dui, malesuada luctus massa posuere id. 
+
+Nulla semper ligula eget diam vulputate aliquam. Integer vel interdum tortor, vel auctor nulla. 
+
+Phasellus dictum ultricies turpis ut iaculis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+
+Mauris ornare rhoncus eros. Quisque malesuada nisl eu rutrum finibus. Aliquam vestibulum nisi et purus dignissim bibendum. 
+
+Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ultrices fringilla.
+                        </textarea>
+                        <button id="btnBackCreditsMenu" class="lastButton">Back to Start Screen</button> <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="newGame" class="menu page">
+            <div class="header">
+                <div class="leftspacer">
+                    <div class="topspacer">&nbsp;</div>
+                    <div>
+                        <img id="chosenCharacter" class = "newGameCharacterIcon" src="img/Question.png" />
+                    </div>
+                </div>
+                <div class="settingsContainer">                    
+                    <div class ="settingsPlaceholder">
+                        <div class="settingsTitle"> 
+                            Choose your character
+                        </div>
+                        <div id="characterChoice" class="powerLine charGalleryEnhanced">
+                            <div class="powerGalleryItem hero" hero="joe">
+                                <div class="selectedHeroOverlay"></div>
+                                <img src="img/Joe.png" class="newGameGallery"  />
+                            </div>
+                            <div class="powerGalleryItem hero" hero="Nick">
+                                <div class="selectedHeroOverlay"></div>
+                                <img src="img/Nick.png" class="newGameGallery"  />
+                            </div>
+                            <div class="powerGalleryItem hero" hero="Mary">
+                                <div class="selectedHeroOverlay"></div>
+                                <img src="img/Mary.png" class="newGameGallery"  />
+                            </div>
+                            <div class="powerGalleryItem hero" hero="Linda">
+                                <div class="selectedHeroOverlay"></div>
+                                <img src="img/Linda.png" class="newGameGallery"  />
+                            </div>
+                            <div class="powerGalleryItem hero" hero="Jack">
+                                <div class="selectedHeroOverlay"></div>
+                                <img src="img/Jack.png" class="newGameGallery"  />
+                            </div>
+                        </div>
+                        <div class="settingsTitle"> 
+                            Select two special powers
+                        </div>
+                        <div id="powerChoiceOne" class="powerLine charGalleryEnhanced">
+                            <div class="powerGalleryItem powerOne">
+                                <div class="selectedPowerOneOverlay"></div>
+                                <div>
+                                    <img src="img/clone.png" class="powerImage" />
+                                </div>
+                                <div>
+                                    Cloning                            
+                                </div>
+                            </div>
+                            <div class="powerGalleryItem powerOne">
+                                <div class="selectedPowerOneOverlay"></div>
+                                <div>
+                                    <img src="img/stamina.png" class="powerImage" />
+                                </div>
+                                <div>
+                                    Stamina
+                                </div>
+                            </div>
+                            <div class="powerGalleryItem powerOne">
+                                <div class="selectedPowerOneOverlay"></div>
+                                <div>
+                                    <img src="img/luck.png" class="powerImage" />
+                                </div>
+                                <div>
+                                    Luck
+                                </div>
+                            </div>
+                            <div class="powerGalleryItem powerOne">
+                                <div class="selectedPowerOneOverlay"></div>
+                                <div>
+                                    <img src="img/aim.png" class="powerImage" />
+                                </div>
+                                <div>
+                                    Aim
+                                </div>
+                            </div>
+                            <div class="powerGalleryItem powerOne">
+                                <div class="selectedPowerOneOverlay"></div>
+                                <div>
+                                    <img src="img/charisma.png" class="powerImage" />
+                                </div>
+                                <div>
+                                    Charisma
+                                </div>
+                            </div>
+                        </div>
+                        <div id="powerChoiceTwo" class="powerLine charGalleryEnhanced mt10">
+                            <div class="powerGalleryItem powerTwo">
+                                <div class="selectedPowerTwoOverlay"></div>
+                                <div>
+                                    <img src="img/fortune.png" class="powerImage"  />
+                                </div>
+                                <div>
+                                    Fortune
+                                </div>
+                            </div>
+                            <div class="powerGalleryItem powerTwo">
+                                <div class="selectedPowerTwoOverlay"></div>
+                                <div>
+                                    <img src="img/memory.png" class="powerImage" />
+                                </div>
+                                <div>
+                                    Memory
+                                </div>
+                            </div>
+                            <div class="powerGalleryItem powerTwo">
+                                <div class="selectedPowerTwoOverlay"></div>
+                                <div>
+                                    <img src="img/replay.png" class="powerImage" />
+                                </div>
+                                <div>
+                                    Replay
+                                </div>
+                            </div>
+                            <div class="powerGalleryItem powerTwo">
+                                <div class="selectedPowerTwoOverlay"></div>
+                                <div>
+                                    <img src="img/recovery.png" class="powerImage" />
+                                </div>
+                                <div>
+                                    Recovery
+                                </div>
+                            </div>
+                            <div class="powerGalleryItem powerTwo">
+                                <div class="selectedPowerTwoOverlay"></div>
+                                <div>
+                                    <img src="img/weather.png" class="powerImage" />
+                                </div>
+                                <div>
+                                    Weather
+                                </div>
+                            </div>
+                        </div>
+                        <button id="btnBackNewGameMenu" class="halfButton lastButton">Back to Start Screen</button> 
+                        <button id="btnNewGameLoading" class="halfButton lastButton" disabled>Let's Play!</button> 
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="loadGame" class="menu page">
+            <div class="header">
+                <div class="leftspacer">
+                    <div class="topspacer">&nbsp;</div>
+                    <div>
+                        <img class = "newGameCharacterIcon" src="img/Joe.png" />
+                    </div>
+                </div>
+                <div class="settingsContainer">                    
+                    <div class ="settingsPlaceholder">
+                        <div class="settingsTitle"> 
+                            Load Game
+                        </div>
+                        <div class="levels">
+                            <div class="levelContainer">
+                                <div class="selectedLevelOverlay"></div>                                
+                                <div class="pictureLevel">
+                                    <img src="img/DesertLevel.png" class="levelCapture" />
+                                </div>
+                                <div class ="levelDescription">Desert Hut - Feb 17 11:58 AM</div>
+                                <div class = "loadGameNowNow">
+                                    <button class="loadGameScreenButton">Go <img class="goButton" src="img/go.png"></button>
+                                </div>
+                            </div>
+                            <div class="levelContainer">
+                                <div class="selectedLevelOverlay"></div>
+                                <div class="pictureLevel">
+                                    <img src="img/BoulderLevel.png" class="levelCaptureW" />
+                                </div>
+                                <div class ="levelDescription">Boulder Escape - Feb 15 05:12 PM</div>
+                                <div class = "loadGameNowNow">
+                                    <button class="loadGameScreenButton">Go <img class="goButton" src="img/go.png"></button>
+                                </div>
+                            </div>
+                            <div class="levelContainer">
+                                <div class="selectedLevelOverlay"></div>                                
+                                <div class="pictureLevel">
+                                    <img src="img/SpaceLevel.png" class="levelCapture" />
+                                </div>
+                                <div class ="levelDescription">Science Lab - Feb 13 02:36 AM</div>
+                                <div class = "loadGameNowNow">
+                                    <button class="loadGameScreenButton">Go <img class="goButton" src="img/go.png"></button>
+                                </div>
+                            </div>
+                            <div class="levelContainer">
+                                <div class="selectedLevelOverlay"></div>                                
+                                <div class="pictureLevel">
+                                    <img src="img/GraveyardLevel.png" class="levelCapture" />
+                                </div>
+                                <div class ="levelDescription">Pet Semetary - Feb 09 04:36 AM</div>
+                                <div class = "loadGameNowNow">
+                                    <button class="loadGameScreenButton">Go <img class="goButton" src="img/go.png"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button id="btnBackLoadGameMenu" class="lastButton">Back to Start Screen</button>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id ="game" class = "game page">
+            <div class="gameKeys">
+                Press:
+                <ul>
+                    <li>d or D to go to the Death Screen</li>
+                    <li>p or P to go to the Pause Menu</li>
+                    <li>l or L to simulate Loading a new mission</li>
+                </ul>
+            </div>
+        </div>        
+        <div id="charging" class="charging page">
+            <div class="upperLeftCharacter">
+                <img src="img/HappyJoe.png" class="chargingCharacter" />
+            </div>
+            <div class="upperRightTitle blink">
+                The uncanny adventures <br/> of Salaryman Joe
+            </div>
+            <div id="chargingEnsemble" class="bottom">
+                <div id="chargingBar">
+                    <div id="chargingProgress"></div>
+                </div>
+                <div id="chargingText">Loading resources... </div>
+            </div>
+        </div>
+        <div id="death" class="blank page">
+            <div class="bigHeader">
+                Oh no! You have died!!!
+            </div>
+            <div class="deathCharacter">
+                <img src="img/DeadJoe.png" class="iconDead" />
+            </div>
+            <div class="deathButtons">
+                <button id="btnBackDeathMenu" class="halfButton lastButton">Back to Main Menu</button> 
+                <button id="btnContinueDeathCharging" class="halfButton lastButton">Continue</button> 
+                <br />
+            </div>
+        </div>
+        <div id="confirmQuit" class="blank page">
+            <div class="bigHeader">
+                Progress will be lost!
+                Do you want to exit?
+            </div>
+            <div class="choiceCharacter">
+                <div class="choiceContainer">
+                    <img src="img/happyJoe.png" class="buttonCharacter"/>
+                    <button id="btnBackPauseMenu" class="lastButton">No</button>                    
+                </div>
+                <div class="choiceContainer">
+                    <img src="img/walkingJoe.png"  class="buttonCharacter"/>
+                    <button id="btnContinueMainMenu" class="lastButton">Yes</button>                     
+                </div>
+                <br />
+            </div>
+        </div>
+        <div id="pauseMenu" class="menu page">
+            <div class="pauseControl">
+                <div class="pauseTitle">Pause</div>
+                <div class="innerStatus">
+                    <div class = "playerStatus">
+                        <img src="img/HappyJoe.png" class="playerIcon" >
+                        <p>Status: Alive and kicking</p>
+                        <p>Resources: $400000</p>
+                        <p>XP: Nimrod (400XP)</p>
+                        <p>Inventory: Pheasant</p>
+                    </div>
+                    <div class="pauseControls">
+                        <button class="pauseButtons" id="btnResumeGame">RESUME GAME</button> <br />
+                        <button class="pauseButtons" id="btnInventory">INVENTORY</button> <br />
+                        <button class="pauseButtons" id="btnMissions">MISSIONS</button> <br />
+                        <button class="pauseButtons" id="btnBudget">BUDGET</button> <br />
+                        <button class="pauseButtons" id="btnTraits" >TRAITS</button> <br />
+                        <button class="pauseButtons" id="btnPauseSettings">SETTINGS</button> <br />
+                        <button class="pauseButtons" id="btnStatistics">STATISTICS</button> <br />
+                        <button class="pauseButtons" id="btnPauseQuit" class="lastButton">QUIT GAME</button> <br />
+                        <br />
+                    </div>
+                </div>
+                <div class="pauseBottom">&nbsp;</div>
+            </div>
+        </div>
+        <div id="settings" class="menu page">
+            <div class="header">
+                <div class="leftspacer">
+                    <div class="topspacer">&nbsp;</div>
+                    <div>
+                        <img class = "newGameCharacterIcon" src="img/Joe.png" />
+                    </div>
+                </div>
+                <div class="settingsContainer">                    
+                    <div class ="settingsPlaceholder">
+                        <div id="currentSettingsTitle" class="settingsTitle">
+                            Gameplay Settings
+                        </div>
+                        <div id="Gameplay" class="configPlaceholder">
+                            <div class="settingsFromTheLeft">
+                                <div class="sliderEnsemble">
+                                    <div class="sliderTitle">Overall Game Level</div>
+                                    <dlv class="sliderItself">
+                                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    </dlv>
+                                    <div class="sliderScale">
+                                        <div class="sliderLeftScale">Easy</div>
+                                        <div class="sliderRightScale">Are you sure?</div>
+                                    </div>
+                                </div>
+                                <div class="sliderEnsemble">
+                                    <div class="sliderTitle">NPC Agressiveness</div>
+                                    <dlv class="sliderItself">
+                                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    </dlv>
+                                    <div class="sliderScale">
+                                        <div class="sliderLeftScale">Canada</div>
+                                        <div class="sliderRightScale">USA</div>
+                                    </div>
+                                </div>
+                                <div class="sliderEnsemble">
+                                    <div class="sliderTitle">Enemy Strength</div>
+                                    <dlv class="sliderItself">
+                                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    </dlv>
+                                    <div class="sliderScale">
+                                        <div class="sliderLeftScale">Mice</div>
+                                        <div class="sliderRightScale">Gorilla</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settingsFromTheRight">
+                                <div class="sliderEnsemble">
+                                    <div class="sliderTitle">Weapon Resilience</div>
+                                    <dlv class="sliderItself">
+                                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    </dlv>
+                                    <div class="sliderScale">
+                                        <div class="sliderLeftScale">AK-47</div>
+                                        <div class="sliderRightScale">Feathers</div>
+                                    </div>
+                                </div>
+                                <div class="sliderEnsemble">
+                                    <div class="sliderTitle">Quantity of Enemies</div>
+                                    <dlv class="sliderItself">
+                                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    </dlv>
+                                    <div class="sliderScale">
+                                        <div class="sliderLeftScale">Small Gang</div>
+                                        <div class="sliderRightScale">Chinatown</div>
+                                    </div>
+                                </div>
+                                <div class="sliderEnsemble">
+                                    <div class="sliderTitle">Enemy Speed</div>
+                                    <dlv class="sliderItself">
+                                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    </dlv>
+                                    <div class="sliderScale">
+                                        <div class="sliderLeftScale">Snail</div>
+                                        <div class="sliderRightScale">F-15</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Access"  class="configPlaceholder">
+                            <div class="settingsFromTheLeft">
+                                <div class="radioEnsemble">
+                                    <div class="radioTitle">Enable Gore</div>
+                                    <div class="radioOptions">
+                                        <div class="radioOption">
+                                            <input type="radio" name="eg" />
+                                            <span class="radioOptionLabel">Yes</span>        
+                                        </div>
+                                        <div class="radioOption">
+                                            <input type="radio" name="eg" />
+                                            <span class="radioOptionLabel">No</span>        
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="radioEnsemble">
+                                    <div class="radioTitle">Use High Contrast</div>
+                                    <div class="radioOptions">
+                                        <div class="radioOption">
+                                            <input type="radio" name="ro" />
+                                            <span class="radioOptionLabel">Yes</span>        
+                                        </div>
+                                        <div class="radioOption">
+                                            <input type="radio" name="ro" />
+                                            <span class="radioOptionLabel">No</span>        
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="radioEnsemble">
+                                    <div class="radioTitle">Closed Captioning</div>
+                                    <div class="radioOptions">
+                                        <div class="radioOption">
+                                            <input type="radio" name="cc" />
+                                            <span class="radioOptionLabel">Yes</span>        
+                                        </div>
+                                        <div class="radioOption">
+                                            <input type="radio" name="cc" />
+                                            <span class="radioOptionLabel">No</span>        
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="settingsFromTheRight">
+                                <div class="radioEnsemble">
+                                    <div class="radioTitle">Always Shows Cutscenes</div>
+                                    <div class="radioOptions">
+                                        <div class="radioOption">
+                                            <input type="radio" name="asc" />
+                                            <span class="radioOptionLabel">Yes</span>        
+                                        </div>
+                                        <div class="radioOption">
+                                            <input type="radio" name="asc" />
+                                            <span class="radioOptionLabel">No</span>        
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="radioEnsemble">
+                                    <div class="radioTitle">Avoid High Pitched Sounds</div>
+                                    <div class="radioOptions">
+                                        <div class="radioOption">
+                                            <input type="radio" name="ahps" />
+                                            <span class="radioOptionLabel">Yes</span>        
+                                        </div>
+                                        <div class="radioOption">
+                                            <input type="radio" name="ahps" />
+                                            <span class="radioOptionLabel">No</span>        
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sliderEnsemble">
+                                    <div class="sliderTitle">Precision of Controls</div>
+                                    <dlv class="sliderItself">
+                                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    </dlv>
+                                    <div class="sliderScale">
+                                        <div class="sliderLeftScale">Push the tempo</div>
+                                        <div class="sliderRightScale">NASA</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Control"  class="configPlaceholder">
+                            <div class="settingsFromTheLeft">
+                                <div class="controlTitle">On foot/swimming</div>
+                                <div class="controlList">
+                                    <ul>
+                                        <li>
+                                            Front: <span id="frontwalk">W</span>
+                                            <input class="controltxt" type="text" id="frontwalkinput" maxlength="1" /> 
+                                            <button id="frontwalkbtn" class="smallbutton">ok</button>
+                                        </li>
+                                        <li>
+                                            Back: <span id="backwalk">S</span>
+                                            <input class="controltxt" type="text" id="backwalkinput" maxlength="1" /> 
+                                            <button id="backwalkbtn" class="smallbutton">ok</button>
+                                        </li>
+                                        <li>Left: <span id="leftwalk">A</span>
+                                            <input class="controltxt" type="text" id="leftwalkinput"  maxlength="1" /> 
+                                            <button id="leftwalkbtn" class="smallbutton">ok</button>
+                                        </li>
+                                        <li>Right: <span id="rightwalk">D</span>
+                                            <input class="controltxt" type="text" id="rightwalkinput" maxlength="1" /> 
+                                            <button id="rightwalkbtn" class="smallbutton">ok</button>
+                                        </li>
+                                        <li>Faster: Spacebar</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="settingsFromTheRight">
+                                <div class="controlTitle">Driving</div>
+                                <div class="controlList">
+                                    <ul>
+                                        <li>Gas: <span id="frontdrive">W</span>
+                                            <input class="controltxt" type="text" id="frontdriveinput" maxlength="1" /> 
+                                            <button id="frontdrivebtn" class="smallbutton">ok</button>
+                                        </li>
+                                        <li>Breke: <span id="backdrive">S</span>
+                                            <input class="controltxt" type="text" id="backdriveinput" maxlength="1" /> 
+                                            <button id="backdrivebtn" class="smallbutton">ok</button>
+                                        </li>
+                                        <li>Left: <span id="leftdrive">A</span>
+                                            <input class="controltxt" type="text" id="leftdriveinput" maxlength="1" /> 
+                                            <button id="leftdrivebtn" class="smallbutton">ok</button>
+                                        </li>
+                                        <li>Right: <span id="rightdrive">D</span>
+                                            <input class="controltxt" type="text" id="rightdriveinput" maxlength="1" /> 
+                                            <button id="rightdrivebtn" class="smallbutton">ok</button>
+                                        </li>
+                                        <li>HandBreak: Spacebar</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="settingsFromEverywhere">
+                                <div class="inTheMiddle">
+                                    <div class="controlTitle">Shooting</div>
+                                    <div class="controlList">
+                                        <ul>
+                                            <li>Weapon Choice: Mouse Wheel</li>
+                                            <li>Shoot: Left Mouse Click</li>
+                                            <li>Alternate Shoot: Right Mouse Click</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Audio"  class="configPlaceholder">
+                            <div class="settingsFromTheLeft">
+                                <div class="sliderEnsemble">
+                                    <div class="sliderTitle">Background Music</div>
+                                    <dlv class="sliderItself">
+                                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    </dlv>
+                                    <div class="sliderScale">
+                                        <div class="sliderLeftScale">Enya</div>
+                                        <div class="sliderRightScale">Megadeth</div>
+                                    </div>
+                                </div>
+                                <div class="sliderEnsemble">
+                                    <div class="sliderTitle">Sound FX</div>
+                                    <dlv class="sliderItself">
+                                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    </dlv>
+                                    <div class="sliderScale">
+                                        <div class="sliderLeftScale">Isolation</div>
+                                        <div class="sliderRightScale">Michael Bay</div>
+                                    </div>
+                                </div>
+                                <div class="sliderEnsemble">
+                                    <div class="sliderTitle">Narrator</div>
+                                    <dlv class="sliderItself">
+                                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    </dlv>
+                                    <div class="sliderScale">
+                                        <div class="sliderLeftScale">Chess</div>
+                                        <div class="sliderRightScale">WWE</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settingsFromTheRight">
+                                <div class="sliderEnsemble">
+                                    <div class="sliderTitle">Engine</div>
+                                    <dlv class="sliderItself">
+                                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    </dlv>
+                                    <div class="sliderScale">
+                                        <div class="sliderLeftScale">Tesla</div>
+                                        <div class="sliderRightScale">F-1</div>
+                                    </div>
+                                </div>
+                                <div class="sliderEnsemble">
+                                    <div class="sliderTitle">Contextual Sound</div>
+                                    <dlv class="sliderItself">
+                                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    </dlv>
+                                    <div class="sliderScale">
+                                        <div class="sliderLeftScale">Normal Life</div>
+                                        <div class="sliderRightScale">Jaws</div>
+                                    </div>
+                                </div>
+                                <div class="sliderEnsemble">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div id="Graphics"  class="configPlaceholder">
+                            <div class="settingsFromTheLeft">
+                                <div class="sliderEnsemble">
+                                    <div class="sliderTitle">Refresh Rate</div>
+                                    <dlv class="sliderItself">
+                                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    </dlv>
+                                    <div class="sliderScale">
+                                        <div class="sliderLeftScale">Laserdisc</div>
+                                        <div class="sliderRightScale">Maximum</div>
+                                    </div>
+                                </div>
+                                <div class="sliderEnsemble">
+                                    <div class="sliderTitle">Brightness</div>
+                                    <dlv class="sliderItself">
+                                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    </dlv>
+                                    <div class="sliderScale">
+                                        <div class="sliderLeftScale">Trump</div>
+                                        <div class="sliderRightScale">Neil DeGrasse</div>
+                                    </div>
+                                </div>
+                                <div class="sliderEnsemble">
+                                    <div class="sliderTitle">Contrast</div>
+                                    <dlv class="sliderItself">
+                                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    </dlv>
+                                    <div class="sliderScale">
+                                        <div class="sliderLeftScale">Nickelback</div>
+                                        <div class="sliderRightScale">David Bowie</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settingsFromTheRight">
+                                <div class="radioEnsemble">
+                                    <div class="radioTitle">Motion Blur</div>
+                                    <div class="radioOptions">
+                                        <div class="radioOption">
+                                            <input type="radio" name="mb" />
+                                            <span class="radioOptionLabel">Yes</span>        
+                                        </div>
+                                        <div class="radioOption">
+                                            <input type="radio" name="mb" />
+                                            <span class="radioOptionLabel">No</span>        
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="radioEnsemble">
+                                    <div class="radioTitle">CRT Effect</div>
+                                    <div class="radioOptions">
+                                        <div class="radioOption">
+                                            <input type="radio" name="crteff" />
+                                            <span class="radioOptionLabel">Yes</span>        
+                                        </div>
+                                        <div class="radioOption">
+                                            <input type="radio" name="crteff" />
+                                            <span class="radioOptionLabel">No</span>        
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sliderEnsemble">
+                                    <div class="sliderTitle">Resolution</div>
+                                    <div class="comboSelecting">
+                                        <select >
+                                            <option>4 x 3 (old timer TV)</option>
+                                            <option>16 x 9 (space age TV)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div>
+                            <button id="btnBackSettings" class="halfButton lastButton">Back</button> 
+                            <button id="btnNextSettings" class="halfButton lastButton">Next</button> 
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="inventory" class="menu page">
+            <div class="header">
+                <div class="leftspacer">
+                    <div class="topspacer">&nbsp;</div>
+                    <div>
+                        <img class = "characterIcon" src="img/Joe.png" />
+                    </div>
+                </div>
+                <div class="settingsContainer">                    
+                    <div class ="settingsPlaceholder">
+                        <div class="settingsTitle"> 
+                            Inventory
+                        </div>
+                        <div class="inventorySubTitle"> 
+                            Guns
+                        </div>
+                        <div id="gunChoice" class="powerLine charGalleryEnhanced">
+                            <div class="powerGalleryItem item" itemId="0">
+                                <div class="selectedItemOverlay"></div>
+                                <img src="img/I0.png" class="inventoryGallery"  />
+                            </div>
+                            <div class="powerGalleryItem item" itemId="1">
+                                <div class="selectedItemOverlay"></div>
+                                <img src="img/I1.png" class="inventoryGallery"  />
+                            </div>
+                            <div class="powerGalleryItem item" itemId="2">
+                                <div class="selectedItemOverlay"></div>
+                                <img src="img/I2.png" class="inventoryGallery"  />
+                            </div>
+                            <div class="powerGalleryItem item" itemId="3">
+                                <div class="selectedItemOverlay"></div>
+                                <img src="img/I3.png" class="inventoryGallery"  />
+                            </div>
+                            <div class="powerGalleryItem item" itemId="4">
+                                <div class="selectedItemOverlay"></div>
+                                <img src="img/I4.png" class="inventoryGallery"  />
+                            </div>
+                        </div>
+                        <div class="inventorySubTitle"> 
+                            Items
+                        </div>
+                        <div id="itemChoice" class="powerLine charGalleryEnhanced">
+                            <div class="powerGalleryItem item" itemId="5">
+                                <div class="selectedItemOverlay"></div>
+                                <img src="img/I5.png" class="inventoryGallery"  />
+                            </div>
+                            <div class="powerGalleryItem item" itemId="6">
+                                <div class="selectedItemOverlay"></div>
+                                <img src="img/I6.png" class="inventoryGallery"  />
+                            </div>
+                            <div class="powerGalleryItem item" itemId="7">
+                                <div class="selectedItemOverlay"></div>
+                                <img src="img/I7.png" class="inventoryGallery"  />
+                            </div>
+                            <div class="powerGalleryItem item" itemId="8">
+                                <div class="selectedItemOverlay"></div>
+                                <img src="img/I8.png" class="inventoryGallery"  />
+                            </div>
+                            <div class="powerGalleryItem item" itemId="9">
+                                <div class="selectedItemOverlay"></div>
+                                <img src="img/I9.png" class="inventoryGallery"  />
+                            </div>
+                        </div>
+                        <div class="inventorydescription"> 
+                            <span id="inventoryItemName"></span> <span id="inventoryItemDescription"></span>
+                        </div>
+                        <button id="btnBackInventoryPauseMenu" class="lastButton">Back to Pause Menu</button> <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="missions" class="menu page">
+            <div class="header">
+                <div class="leftspacer">
+                    <div class="topspacer">&nbsp;</div>
+                    <div>
+                        <img class = "characterIcon" src="img/Joe.png" />
+                    </div>
+                </div>
+                <div class="settingsContainer">                    
+                    <div class ="settingsPlaceholder">
+                        <div class="settingsTitle"> 
+                            Missions
+                        </div>
+                        <div class="missionControl">
+                            <div class="missionList">
+                                <div class = "missionHeader chooseYourMission" missionId = "0">
+                                    <div class="missionOverlay"></div>
+                                    <div class="missionImage">
+                                        <img src="img/m0.png" class="missionIcon" />
+                                    </div>
+                                    <div class="missionTitle">
+                                        Mr. Postman
+                                    </div>
+                                </div>
+                                <div class = "missionHeader chooseYourMission" missionId = "1">
+                                    <div class="missionOverlay"></div>
+                                    <div class="missionImage">
+                                        <img src="img/m1.png" class="missionIcon" />
+                                    </div>
+                                    <div class="missionTitle">
+                                        Bye-bye Birdie
+                                    </div>
+                                </div>
+                                <div class = "missionHeader chooseYourMission" missionId = "2">
+                                    <div class="missionOverlay"></div>
+                                    <div class="missionImage">
+                                        <img src="img/m2.png" class="missionIcon" />
+                                    </div>
+                                    <div class="missionTitle">
+                                        That green plastic plant
+                                    </div>
+                                </div>
+                                <div class = "missionHeader chooseYourMission" missionId = "3">
+                                    <div class="missionOverlay"></div>
+                                    <div class="missionImage">
+                                        <img src="img/m3.png" class="missionIcon"/>
+                                    </div>
+                                    <div class="missionTitle">
+                                        Washi-Washi san
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="missionDescription" class="missionDescription">
+                                &nbsp;
+                            </div>
+                        </div>
+                        <button id="btnBackMissionsPauseMenu" class="lastButton">Back to Pause Menu</button> <br />
+                    </div>
+                </div>
+            </div>           
+        </div>
+        <div id="budget" class="menu page">
+            <div class="header">
+                <div class="leftspacer">
+                    <div class="topspacer">&nbsp;</div>
+                    <div>
+                        <img class = "characterIcon" src="img/Joe.png" />
+                    </div>
+                </div>
+                <div class="settingsContainer">                    
+                    <div class ="settingsPlaceholder">
+                        <div class="settingsTitle"> 
+                            Budget
+                        </div>
+                        <div class="budgetDivisionBell">
+                            <div class="budgetControlsLeft">
+                                <p>Income: $1000 (delivery boy)</p>
+                                <p>Bills: $300</p>
+                                <p>Employees: $400</p>
+                                <button class="traitButtonAction mb20">PAY TRIBUTE</button>
+                                <button class="traitButtonAction mb20">HIRE</button>
+                                <button class="traitButtonAction mb20">FIRE (literally)</button>
+                            </div>
+                            <div class="budgetControlsRight">
+                                <div class="openAccount">
+                                    <p>Chequing Account: $11200</p>
+                                    <button class="traitButtonAction mt10 mb20">TRANSFER</button>
+                                </div>
+                                <div class="hiddenAccount">
+                                    <p>Hidden Chequing Account: 237690</p>
+                                    <button class="traitButtonAction mt10 mb20">TRANSFER</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="btnBackBudgetPauseMenu" class="lastButton">Back to Pause Menu</button> <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="traits" class="menu page">
+            <div class="header">
+                <div class="leftspacer">
+                    <div class="topspacer">&nbsp;</div>
+                    <div>
+                        <img class = "characterIcon" src="img/Joe.png" />
+                    </div>
+                </div>
+                <div class="settingsContainer">                    
+                    <div class ="settingsPlaceholder">
+                        <div class="settingsTitle"> 
+                            Traits
+                        </div>
+                        <div class="trait">
+                            <div class="traitTitle">Strength (100 xp for next level)</div>
+                            <div class="traitScale">
+                                <div class="traitClassification">Little Pup</div>
+                                <div class="traitProgressBarContainer">
+                                    <div class="traitProgressBar">
+                                        <div class="traitCurrentProgress"></div>
+                                    </div>
+                                </div> 
+                                <div class="traitButton">
+                                    <button class="traitButtonAction"> + Add</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trait">
+                            <div class="traitTitle">Agility (100 xp for next level)</div>
+                            <div class="traitScale">
+                                <div class="traitClassification">Big Hippo</div>
+                                <div class="traitProgressBarContainer">
+                                    <div class="traitProgressBar">
+                                        <div class="traitCurrentProgress"></div>
+                                    </div>
+                                </div> 
+                                <div class="traitButton">
+                                    <button class="traitButtonAction"> + Add</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trait">
+                            <div class="traitTitle">Charisma (100 xp for next level)</div>
+                            <div class="traitScale">
+                                <div class="traitClassification">Boring.Very.</div>
+                                <div class="traitProgressBarContainer">
+                                    <div class="traitProgressBar">
+                                        <div class="traitCurrentProgress"></div>
+                                    </div>
+                                </div> 
+                                <div class="traitButton">
+                                    <button class="traitButtonAction"> + Add</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trait">
+                            <div class="traitTitle">Luck (100 xp for next level)</div>
+                            <div class="traitScale">
+                                <div class="traitClassification">Frane Selak</div>
+                                <div class="traitProgressBarContainer">
+                                    <div class="traitProgressBar">
+                                        <div class="traitCurrentProgress"></div>
+                                    </div>
+                                </div> 
+                                <div class="traitButton">
+                                    <button class="traitButtonAction"> + Add</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="traitAvailable">
+                            Available XP: 12000 (greedy)
+                        </div>
+                        <button id="btnBackTraitsPauseMenu" class="lastButton">Back to Pause Menu</button> <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="statistics" class="menu page">
+            <div class="header">
+                <div class="leftspacer">
+                    <div class="topspacer">&nbsp;</div>
+                    <div>
+                        <img class = "characterIcon" src="img/Joe.png" />
+                    </div>
+                </div>
+                <div class="settingsContainer">                    
+                    <div class ="settingsPlaceholder">
+                        <div class="settingsTitle"> 
+                            Statistics
+                        </div>
+                        <div class="facts">
+                            <p>Enemies Killed: 38603</p>
+                            <p>Deaths: 12684</p>
+                            <p>Hours played: 2179 (please get a life)</p>
+                            <p>Worst mission: Washi-Washi san (324 tries)</p>
+                            <p>Best mission: Good Morning USA (First try)</p>
+                            <p>Worst weapon: Machete (1 death)</p>
+                            <p>Best weapon: Scissor (28658 deaths)</p>
+                            <p>Classification: Nimrod</p>
+                        </div>
+                        <div class="frenemies">
+                            <div class="allies">
+                                Allies:
+                                <ul>
+                                    <li>The Gang of Four</li>
+                                    <li>Mc Escher</li>
+                                    <li>Paul Klee</li>
+                                </ul>
+                            </div>
+                            <div class="enemies">
+                                Enemies:
+                                <ul>
+                                    <li>The Dadaists of 5th ave.</li>
+                                    <li>Pop Top Connection</li>
+                                    <li>Duran Duran The Reflex</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button id="btnBackStatisticsPauseMenu" class="lastButton">Back to Pause Menu</button> <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/credits.js"></script>
+    <script type="text/javascript" src="js/charging.js"></script>
+    <script type="text/javascript" src="js/newGame.js"></script>
+    <script type="text/javascript" src="js/loadGame.js"></script>
+    <script type="text/javascript" src="js/settings.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/death.js"></script>
+    <script type="text/javascript" src="js/pause.js"></script>
+    <script type="text/javascript" src="js/confirmQuit.js"></script>
+    <script type="text/javascript" src="js/inventory.js"></script>
+    <script type="text/javascript" src="js/missions.js"></script>
+    <script type="text/javascript" src="js/budget.js"></script>
+    <script type="text/javascript" src="js/traits.js"></script>
+    <script type="text/javascript" src="js/statistics.js"></script>
+</html>
