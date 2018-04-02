@@ -5,7 +5,7 @@ var previousScene = '';
 
 window.onload = function(){
     //showStartScreen();
-    showAnyScreen('inventory');
+    showAnyScreen('settings');
 }
 
 var showAnyScreen = function(name){

@@ -12,6 +12,14 @@
     text-align: center;    
     
 }
+.settingsFromTheLeft{
+    width:50%;
+    float: left;
+}
+.settingsFromTheRight{
+    width:50%;
+    float: left;
+}
 .settingsTitle{
     margin-bottom: 20px;
     min-width: 100%;
@@ -19,4 +27,37 @@
     font-family: chewy;
     font-size:50px;
     color:#343F4B;    
+}
+.sliderTitle{
+    font-family: chewy;
+    font-size:20px;
+    color:#343F4B;
+    text-align: left;
+    margin-left:15px;
+    margin-bottom:10px;
+}
+.sliderItself{
+    width:50%;
+}
+.sliderScale{
+    width: 100%;
+}
+.sliderLeftScale{
+    float:left;
+    font-family: chewy;
+    font-size:15px;
+    color:#343F4B;
+    text-align: left;
+    margin-left:15px;
+}
+.sliderRightScale{
+    float:right;
+    font-family: chewy;
+    font-size:15px;
+    color:#343F4B;
+    text-align: right;
+    margin-right:15px;
+}
+.sliderEnsemble{
+    height:100px;
 }

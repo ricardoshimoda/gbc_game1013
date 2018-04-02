@@ -15,13 +15,15 @@ var settingPlaceholder = [
 ];
 var backTo = '';
 
+setSettings();
+
 var setSettings = function (){
     currentSettingIndex = 0;
     backTo = previousScene;
     var setSettingsTitle = document.getElementById('currentSettingsTitle');
     setSettingsTitle.innerHTML = settingArray[currentSettingIndex];
     removeOverlay('configPlaceholder');
-    document.getElementById(settingPlaceholder[currentSettingIndex]).display='block';
+    document.getElementById(settingPlaceholder[currentSettingIndex]).style.display='block';
 };
 
 var backSettings = function(){
@@ -34,7 +36,7 @@ var backSettings = function(){
     }
     else{
         removeOverlay('configPlaceholder');
-        document.getElementById(settingPlaceholder[currentSettingIndex]).display='block';
+        document.getElementById(settingPlaceholder[currentSettingIndex]).style.display='block';
         document.getElementById('currentSettingsTitle').innerHTML = settingArray[currentSettingIndex];
     }
 };
