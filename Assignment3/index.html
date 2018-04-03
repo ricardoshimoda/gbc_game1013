@@ -1,4 +1,4 @@
-<!doctype html>
+ub5w<!doctype html>
 <html>
 <head>
     <link rel="icon" href="img/icon.ico">
@@ -20,6 +20,9 @@
     <link href="css/budget.css" rel="stylesheet" />
     <link href="css/traits.css" rel="stylesheet" />
     <link href="css/statistics.css" rel="stylesheet" />
+    <link href="css/hudDriving.css" rel="stylesheet" />
+    <link href="css/hudSwimming.css" rel="stylesheet" />
+    <link href="css/hudWalking.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container">
@@ -308,30 +311,6 @@ Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ult
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div id ="game" class = "game page">
-            <div class="gameKeys">
-                Press:
-                <ul>
-                    <li>d or D to go to the Death Screen</li>
-                    <li>p or P to go to the Pause Menu</li>
-                    <li>l or L to simulate Loading a new mission</li>
-                </ul>
-            </div>
-        </div>        
-        <div id="charging" class="charging page">
-            <div class="upperLeftCharacter">
-                <img src="img/HappyJoe.png" class="chargingCharacter" />
-            </div>
-            <div class="upperRightTitle blink">
-                The uncanny adventures <br/> of Salaryman Joe
-            </div>
-            <div id="chargingEnsemble" class="bottom">
-                <div id="chargingBar">
-                    <div id="chargingProgress"></div>
-                </div>
-                <div id="chargingText">Loading resources... </div>
             </div>
         </div>
         <div id="death" class="blank page">
@@ -1045,6 +1024,53 @@ Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ult
                 </div>
             </div>
         </div>
+        <div id="charging" class="charging page">
+            <div class="upperLeftCharacter">
+                <img src="img/HappyJoe.png" class="chargingCharacter" />
+            </div>
+            <div class="upperRightTitle blink">
+                The uncanny adventures <br/> of Salaryman Joe
+            </div>
+            <div id="chargingEnsemble" class="bottom">
+                <div id="chargingBar">
+                    <div id="chargingProgress"></div>
+                </div>
+                <div id="chargingText">Loading resources... </div>
+            </div>
+        </div>
+        <div id ="game" class = "walking page">
+            <div class="gameKeys">
+                Press:
+                <ul>
+                    <li>p or P to go to the Pause Menu</li>
+                    <li>l or L to simulate Loading a new mission</li>
+                    <li>s or S to simulate Swimming</li>
+                    <li>d or D to simulate Driving</li>
+                </ul>
+            </div>
+        </div>
+        <div id ="swimming" class = "swimming page">
+            <div class="gameKeys">
+                Press:
+                <ul>
+                    <li>p or P to go to the Pause Menu</li>
+                    <li>l or L to simulate Loading a new mission</li>
+                    <li>w or W to simulate Walking</li>
+                    <li>d or D to simulate Driving</li>
+                </ul>
+            </div>
+        </div>
+        <div id ="driving" class = "driving page">
+            <div class="gameKeys">
+                Press:
+                <ul>
+                    <li>p or P to go to the Pause Menu</li>
+                    <li>l or L to simulate Loading a new mission</li>
+                    <li>w or W to simulate Walking</li>
+                    <li>s or S to simulate Swimming</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
     <script type="text/javascript" src="js/script.js"></script>
@@ -1063,4 +1089,7 @@ Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ult
     <script type="text/javascript" src="js/budget.js"></script>
     <script type="text/javascript" src="js/traits.js"></script>
     <script type="text/javascript" src="js/statistics.js"></script>
+    <script type="text/javascript" src="js/hudDriving.js"></script>
+    <script type="text/javascript" src="js/hudSwimming.js"></script>
+    <script type="text/javascript" src="js/hudWalking.js"></script>
 </html>

@@ -1,10 +1,5 @@
-.game{
-    background-image: url('../img/game.png');
-    background-color: black;
-    background-size:cover;
-}
 .gameKeys{
-    font-size:60px;
+    font-size:20px;
     font-family: chewy;
     color: #FDC454;
     background: rgba(0, 0, 0, 0.5);

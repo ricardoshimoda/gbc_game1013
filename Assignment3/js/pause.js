@@ -1,5 +1,8 @@
+var goingBackFromPause = '';
+
 document.getElementById('btnResumeGame').addEventListener('click', function(){
-    transitionScene('pauseMenu', 'game', false, setGame);
+    console.log(goingBackFromPause);
+    transitionScene('pauseMenu', goingBackFromPause, false, setGame);
 });
 document.getElementById('btnInventory').addEventListener('click', function(){
     transitionScene('pauseMenu', 'inventory', false, setSettings);
@@ -22,3 +25,7 @@ document.getElementById('btnStatistics').addEventListener('click', function(){
 document.getElementById('btnPauseQuit').addEventListener('click', function(){
     transitionScene('pauseMenu', 'confirmQuit');
 });
+
+var setPauseBack = function(){
+    goingBackFromPause = previousScene;
+};

@@ -2,10 +2,11 @@ var inter = {};
 var mainTop = 0;
 const step =10;
 var previousScene = '';
+var currentScene = '';
 
 window.onload = function(){
-    showStartScreen();
-    //showAnyScreen('settings');
+    //showStartScreen();
+    showAnyScreen('game');
 }
 
 var showAnyScreen = function(name){
@@ -69,6 +70,7 @@ var percentageBar = function(){
 
 var transitionScene = function (sceneId1, sceneId2, hide, callback){
     previousScene = sceneId1; /* just in case */
+    currentScene = sceneId2;
     var scene1 = document.getElementById(sceneId1);
     var scene2 = document.getElementById(sceneId2);
     scene2.style.visibility = 'visible';
