@@ -33,5 +33,19 @@ var setGame = function(){
     window.addEventListener('keydown',goingPlaces);
 };
 
+var setWalking= function(){
+    window.addEventListener('keydown',goingPlaces);
+    window.addEventListener('mousewheel',MouseWheelHandler);
+};
+
+function MouseWheelHandler(e)
+{
+    console.log(e);
+    // cross-browser wheel delta
+    var e = window.event || e; // old IE support
+    var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+
+    return false;
+}
 setGame();
 currentScene='game';
