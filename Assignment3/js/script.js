@@ -6,7 +6,7 @@ var currentScene = '';
 
 window.onload = function(){
     //showStartScreen();
-    showAnyScreen('driving');
+    showAnyScreen('swimming');
 }
 
 var showAnyScreen = function(name){

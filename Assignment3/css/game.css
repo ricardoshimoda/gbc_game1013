@@ -6,7 +6,10 @@
     margin-left:auto;
     margin-right: auto;
     text-align: left;
-    margin-top: 100px;
+    position:relative;
+    display:block;
+    float:left;
+    padding-left:20px;
 }
 
 .HUDLeftColumn{
@@ -181,4 +184,33 @@
     top:24px;
     width:170px;
     height:27px;    
+}
+.HUDEngineTemp{
+    font-family: chewy;
+    font-size:20px;
+    color:#FDC454;
+    margin-left:20px;
+    width: 200px;
+    text-align: center;
+}
+#HUDEngineGauge{
+    width:120px;
+}
+.HUDOxygen{
+    margin-left:20px;
+    width:262px;
+    height:70px;
+    background-size:cover;
+    background-image: url(../img/HUDOxygen.png);   
+    position:relative; 
+}
+.HUDOxygenBar{
+    position: absolute;
+    background-image: url(../img/HUDBgpower.png);
+    background-color: black;
+    position:absolute;
+    left:65px;
+    top:22px;
+    width:170px;
+    height:27px;        
 }
