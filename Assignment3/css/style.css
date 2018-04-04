@@ -100,6 +100,10 @@ button:disabled{
     margin-bottom:20px;
 }
 
+.mt30{
+    margin-top:30px;
+}
+
 .slider {
     -webkit-appearance: none;
     width: 95%;

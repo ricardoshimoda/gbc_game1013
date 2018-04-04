@@ -31,12 +31,19 @@ var goingPlaces = function(event){
 
 var setGame = function(){
     window.addEventListener('keydown',goingPlaces);
+    if(currentScene == 'game' || currentScene == 'swimming'){
+        window.addEventListener('mousewheel',MouseWheelHandler);
+    }
+    var mapArray = document.getElementsByClassName('HUDMap');
+    for(var mp = 0; mp < mapArray.length; mp++){
+        mapArray[mp].style.top = (window.innerHeight-200) + 'px';
+        mapArray[mp].style.left = '20px';
+    }
 };
-
+/*
 var setWalking= function(){
-    window.addEventListener('keydown',goingPlaces);
-    window.addEventListener('mousewheel',MouseWheelHandler);
-};
+    var map = 
+};*/
 
 function MouseWheelHandler(e)
 {
@@ -47,5 +54,5 @@ function MouseWheelHandler(e)
 
     return false;
 }
-setGame();
 currentScene='game';
+setGame();

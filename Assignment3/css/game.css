@@ -3,16 +3,16 @@
     font-family: chewy;
     color: #FDC454;
     background: rgba(0, 0, 0, 0.5);
-    margin-top:200px;
     margin-left:auto;
     margin-right: auto;
     text-align: left;
-    width: 60%;
+    margin-top: 100px;
 }
 
 .HUDLeftColumn{
     float:left;
     width:30%;
+    position:relative;
 }
 .HUDMain{
     float:left;
@@ -77,6 +77,53 @@
     width:100px;
     height:40px;
     background-image: url(../img/PowerIce.png);
-    background-size:cover;      
+    background-size:cover;
+}
 
+.HUDMap{
+    background-image:url(../img/HUDFullMap.png);
+    background-color: black;
+    width:250px;
+    height:175px;
+    position: absolute;
+}
+
+.MapJoeIcon{
+    left:105px;
+    top:72px;
+    position:absolute;
+}
+
+.HUDMissionContainer{
+    float:left;
+    width:70%;
+}
+.HUDMissionHighlight{
+    width: 95%;
+    text-align:center;
+    background: rgba(0, 0, 0, 0.5);
+    margin:auto;
+    font-family: chewy;
+    font-size:45px;
+    color:#FDC454;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.HUDStatusBar{
+    width:30%;
+    float:right;
+}
+.HUDHealthContainer{
+    margin-top:20px;
+    width:260px;
+    height:65px;
+    background-size:cover;
+    background-image: url(../img/HUDHealth.png);
+}
+.HUDPowerContainer{
+    margin-top:10px;
+    width:260px;
+    height:65px;
+    background-size:cover;
+    background-image: url(../img/HUDEnergy.png);    
 }
