@@ -1,3 +1,12 @@
+var goingUp = false;
+var goingDown = false;
+var goingLeft = false;
+var goingRight = false;
+var mapInterval = {};
+var initialPosX = 10;
+var initialPosY = 10;
+var skip = 20;
+
 var goingPlaces = function(event){
     switch (event.keyCode)
 	{
@@ -19,39 +28,98 @@ var goingPlaces = function(event){
         case 80:
 		case 112: // PAUSE MENU
             transitionScene(currentScene, 'pauseMenu', false, setPauseBack);    
-            window.removeEventListener('keydown',goingPlaces);
             break;
         case 76:
 		case 108: // RELOAD
-            transitionScene(currentScene, 'charging', false, chargingBegin);    
-            window.removeEventListener('keydown',goingPlaces);
+            transitionScene(currentScene, 'charging', false, chargingBegin);
             break;
-	} 
+        /* Setting up the variables that move the map */
+        case 37: // GOING LEFT
+            goingLeft = true;
+            break;
+        case 38: // GOING UP
+            goingUp = true;
+            break;
+        case 39: // GOING RIGHT
+            goingRight = true;
+            break;
+        case 40: // GOING DOWN
+            goingDown = true;
+            break;
+        
+    }
+    event.stopPropagation();
 }
 
-var setGame = function(){
-    window.addEventListener('keydown',goingPlaces);
+var stopMovingMap = function(event){
+    switch (event.keyCode)
+	{
+        /* Setting up the variables that move the map */
+        case 37: // GOING LEFT
+            goingLeft = false;
+            break;
+        case 38: // GOING UP
+            goingUp = false;
+            break;
+        case 39: // GOING RIGHT
+            goingRight = false;
+            break;
+        case 40: // GOING DOWN
+            goingDown = false;
+            break;
+        
+    }    event.stopPropagation();
+};
+
+var unsetGame = function(){
+    window.removeEventListener('keydown',goingPlaces);
     if(currentScene == 'game' || currentScene == 'swimming'){
-        window.addEventListener('mousewheel',MouseWheelHandler);
+        window.removeEventListener('mousewheel',MouseWheelHandler);
+    }
+};
+
+
+var setGame = function(){
+    window.addEventListener('keydown',goingPlaces, true);
+    window.addEventListener('keyup',stopMovingMap, true);
+    if(currentScene == 'game' || currentScene == 'swimming'){
+        window.addEventListener('mousewheel',MouseWheelHandler, true);
     }
     var mapArray = document.getElementsByClassName('HUDMap');
     for(var mp = 0; mp < mapArray.length; mp++){
         mapArray[mp].style.top = (window.innerHeight-200) + 'px';
         mapArray[mp].style.left = '20px';
     }
+    var myCurrentMap = document.getElementById(currentScene + 'Map');
+    myCurrentMap.style.backgroundPosition = (initialPosX)+'px ' + initialPosY + 'px';
+    mapInterval = setInterval(moveMap, 100);
 };
-/*
-var setWalking= function(){
-    var map = 
-};*/
 
-function MouseWheelHandler(e)
+var moveMap = function(){
+    if(goingUp)
+    {
+        initialPosY+=skip;
+    }
+    if(goingDown){
+        initialPosY-=skip;
+    }
+    if(goingLeft){
+        initialPosX+=skip;
+    }
+    if(goingRight){
+        initialPosX-=skip;
+    }
+    var myCurrentMap = document.getElementById(currentScene + 'Map');
+    myCurrentMap.style.backgroundPosition = (initialPosX)+'px ' + initialPosY + 'px';
+};
+
+function MouseWheelHandler(event)
 {
-    console.log(e);
+    console.log(event);
     // cross-browser wheel delta
     var e = window.event || e; // old IE support
     var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-
+    event.stopPropagation();
     return false;
 }
 currentScene='game';
