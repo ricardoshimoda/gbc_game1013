@@ -6,7 +6,7 @@ var currentScene = '';
 
 window.onload = function(){
     //showStartScreen();
-    showAnyScreen('game');
+    showAnyScreen('driving');
 }
 
 var showAnyScreen = function(name){

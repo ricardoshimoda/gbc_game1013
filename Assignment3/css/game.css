@@ -149,3 +149,36 @@
     width:170px;
     height:27px;
 }
+.HUDCarContainer{
+    margin-top:20px;
+    width:260px;
+    height:65px;
+    background-size:cover;
+    background-image: url(../img/HUDCarHealth.png);
+    position:relative;
+}
+.HUDCarBar{
+    background-image: url(../img/HUDBghealth.png);
+    background-color: black;
+    position:absolute;
+    left:65px;
+    top:20px;
+    width:170px;
+    height:27px;    
+}
+.HUDArmorContainer{
+    width:260px;
+    height:81px;
+    background-size:cover;
+    background-image: url(../img/HUDCarArmor.png);   
+    position:relative; 
+}
+.HUDArmorBar{
+    background-image: url(../img/HUDBgarmor.png);
+    background-color: black;
+    position:absolute;
+    left:65px;
+    top:24px;
+    width:170px;
+    height:27px;    
+}
