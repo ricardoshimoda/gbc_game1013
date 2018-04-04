@@ -1044,9 +1044,6 @@ Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ult
                     <div id="WalkingMoney" class="HUDMoneyContent">
                         $2000.00
                     </div>
-                    <!--
-                    <img src="img/HUDMoney.png" />
-                    -->
                 </div>
                 <div class="HUDXP">
                     <div id="WalkingXP" class="HUDXPContent">
@@ -1076,8 +1073,10 @@ Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ult
                     </div>
                     <div class="HUDStatusBar">
                         <div class="HUDHealthContainer">
+                            <div class="HUDHealthBar"></div>
                         </div>
                         <div class="HUDPowerContainer">
+                            <div class="HUDPowerBar"></div>
                         </div>
                     </div>
                 </div>
@@ -1116,25 +1115,155 @@ Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ult
             </div>
         </div>
         <div id ="swimming" class = "swimming page">
-            <div class="gameKeys">
-                Press:
-                <ul>
-                    <li>p or P to go to the Pause Menu</li>
-                    <li>l or L to simulate Loading a new mission</li>
-                    <li>w or W to simulate Walking</li>
-                    <li>d or D to simulate Driving</li>
-                </ul>
+            <div class = "HUDLeftColumn">
+                <div class="HUDMoney">
+                    <div id="WalkingMoney" class="HUDMoneyContent">
+                        $2000.00
+                    </div>
+                </div>
+                <div class="HUDXP">
+                    <div id="WalkingXP" class="HUDXPContent">
+                        10638 / 100000
+                    </div>
+                </div>
+                <div class="HUDWeapon">
+                    <div class="HUDWeaponImage" >
+                    </div>
+                    <div class="HUDWeaponAmmo">
+                        6/20
+                    </div>                    
+                </div>
+                <div class="HUDSpell" >
+                </div>
+                <div class="HUDMap">
+                    <img class="MapJoeIcon" src="img/HUDJoeMap.png" />
+                </div>
+            </div>
+            <div class="HUDMain">
+                <div class="HUDHeader">
+                    <div class="HUDMissionContainer">
+                        <div class="mt10">&nbsp;</div>
+                        <div class="HUDMissionHighlight">
+                            Get Next Piece Of Clothing
+                        </div>
+                    </div>
+                    <div class="HUDStatusBar">
+                        <div class="HUDHealthContainer">
+                            <div class="HUDHealthBar"></div>
+                        </div>
+                        <div class="HUDPowerContainer">
+                            <div class="HUDPowerBar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gameKeys">
+                    <div class="settingsFromTheLeft mt30">
+                        To change screens, press:
+                        <ul>
+                            <li>p or P to go to the Pause Menu</li>
+                            <li>l or L to simulate Loading a new mission</li>
+                            <li>s or S to simulate Swimming</li>
+                            <li>d or D to simulate Driving</li>
+                        </ul>
+                        To move the map, press:
+                        <ul>
+                            <li>directionalUp to move the player to the front</li>
+                            <li>directionalLeft to move the player to the left</li>
+                            <li>directionalDown to move the player to the back</li>
+                            <li>directionalRight to move the player to the right</li>
+                        </ul>
+                    </div>
+                    <div class="settingsFromTheRight mt30">
+                        To change the itens on the player display, press:
+                        <ul>
+                            <li>h or H to harm the player</li>
+                            <li>c or C to cast a spell</li>
+                            <li>b or B to buy stuff</li>
+                            <li>x or X to complete a mission</li>
+                            <li>n or N to load/change the mission</li>
+                            <li>o or O to use a health kit</li>
+                            <li>p or P to use a mana potion</li>
+                            <li>mousewheelscroll to activate Weapon Scroll</li>
+                            <li>shift+mousewheelscroll to activate Spell Scroll</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <div id ="driving" class = "driving page">
-            <div class="gameKeys">
-                Press:
-                <ul>
-                    <li>p or P to go to the Pause Menu</li>
-                    <li>l or L to simulate Loading a new mission</li>
-                    <li>w or W to simulate Walking</li>
-                    <li>s or S to simulate Swimming</li>
-                </ul>
+            <div class = "HUDLeftColumn">
+                <div class="HUDMoney">
+                    <div id="WalkingMoney" class="HUDMoneyContent">
+                        $2000.00
+                    </div>
+                </div>
+                <div class="HUDXP">
+                    <div id="WalkingXP" class="HUDXPContent">
+                        10638 / 100000
+                    </div>
+                </div>
+                <div class="HUDWeapon">
+                    <div class="HUDWeaponImage" >
+                    </div>
+                    <div class="HUDWeaponAmmo">
+                        6/20
+                    </div>                    
+                </div>
+                <div class="HUDSpell" >
+                </div>
+                <div class="HUDMap">
+                    <img class="MapJoeIcon" src="img/HUDJoeMap.png" />
+                </div>
+            </div>
+            <div class="HUDMain">
+                <div class="HUDHeader">
+                    <div class="HUDMissionContainer">
+                        <div class="mt10">&nbsp;</div>
+                        <div class="HUDMissionHighlight">
+                            Get Next Piece Of Clothing
+                        </div>
+                    </div>
+                    <div class="HUDStatusBar">
+                        <div class="HUDHealthContainer">
+                            <div class="HUDHealthBar"></div>
+                        </div>
+                        <div class="HUDPowerContainer">
+                            <div class="HUDPowerBar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gameKeys">
+                    <div class="settingsFromTheLeft mt30">
+                        To change screens, press:
+                        <ul>
+                            <li>p or P to go to the Pause Menu</li>
+                            <li>l or L to simulate Loading a new mission</li>
+                            <li>s or S to simulate Swimming</li>
+                            <li>d or D to simulate Driving</li>
+                        </ul>
+                        To move the map, press:
+                        <ul>
+                            <li>directionalUp to move the player to the front</li>
+                            <li>directionalLeft to move the player to the left</li>
+                            <li>directionalDown to move the player to the back</li>
+                            <li>directionalRight to move the player to the right</li>
+                        </ul>
+                    </div>
+                    <div class="settingsFromTheRight mt30">
+                        To change the itens on the player display, press:
+                        <ul>
+                            <li>h or H to harm the player</li>
+                            <li>c or C to cast a spell</li>
+                            <li>b or B to buy stuff</li>
+                            <li>x or X to complete a mission</li>
+                            <li>n or N to load/change the mission</li>
+                            <li>o or O to use a health kit</li>
+                            <li>p or P to use a mana potion</li>
+                            <li>mousewheelscroll to activate Weapon Scroll</li>
+                            <li>shift+mousewheelscroll to activate Spell Scroll</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

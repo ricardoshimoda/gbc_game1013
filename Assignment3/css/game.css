@@ -119,11 +119,31 @@
     height:65px;
     background-size:cover;
     background-image: url(../img/HUDHealth.png);
+    position:relative;
 }
 .HUDPowerContainer{
     margin-top:10px;
     width:260px;
     height:65px;
     background-size:cover;
-    background-image: url(../img/HUDEnergy.png);    
+    background-image: url(../img/HUDEnergy.png);   
+    position:relative; 
+}
+.HUDPowerBar{
+    background-image: url(../img/HUDBgpower.png);
+    background-color: black;
+    position:absolute;
+    left:65px;
+    top:16px;
+    width:170px;
+    height:27px;
+}
+.HUDHealthBar{
+    background-image: url(../img/HUDBghealth.png);
+    background-color: black;
+    position:absolute;
+    left:65px;
+    top:16px;
+    width:170px;
+    height:27px;
 }
