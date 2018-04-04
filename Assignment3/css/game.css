@@ -9,3 +9,74 @@
     text-align: left;
     width: 60%;
 }
+
+.HUDLeftColumn{
+    float:left;
+    width:30%;
+}
+.HUDMain{
+    float:left;
+    width:70%;
+}
+.HUDMoney{
+    margin-left:20px;
+    margin-top:20px;
+    background-size:cover;
+    background-image: url(../img/HUDMoney.png);
+    width:171px;
+    height:72px;
+    font-family:chewy;
+    font-size:20px;
+    color: white;
+    position:relative;
+}
+.HUDMoneyContent{
+    position:absolute;
+    left:65px;
+    top:20px;
+}
+.HUDXP{
+    margin-left:13px;
+    background-size:cover;
+    background-image: url(../img/HUDXpWood.png);
+    width:272px;
+    height:75px;
+    font-family:chewy;
+    font-size:20px;
+    color: white;
+    position:relative;
+}
+.HUDXPContent{
+    position:absolute;
+    left:75px;
+    top:20px;    
+}
+.HUDWeapon{
+    margin-left:20px;
+    font-family:chewy;
+    font-size:20px;
+    color:#FDC454;
+    width:100px;   
+}
+.HUDWeaponImage{
+    background-color: black;
+    width:100px;
+    height:100px;
+    background-image: url(../img/I4.png);
+    background-size:cover;      
+}
+.HUDWeaponAmmo{
+    width:100px;
+    text-align:center;
+    background: rgba(0, 0, 0, 0.5);
+    padding-top:5px;
+}
+.HUDSpell{
+    margin-left:20px;
+    background-color: black;
+    width:100px;
+    height:40px;
+    background-image: url(../img/PowerIce.png);
+    background-size:cover;      
+
+}
