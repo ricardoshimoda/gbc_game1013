@@ -82,8 +82,14 @@ var unsetGame = function(){
 var setGame = function(){
     window.addEventListener('keydown',goingPlaces, true);
     window.addEventListener('keyup',stopMovingMap, true);
-    if(currentScene == 'game' || currentScene == 'swimming'){
-        window.addEventListener('mousewheel',MouseWheelHandler, true);
+    if(currentScene == 'game'){
+        setWalking();
+    }
+    else if(currentScene == 'swimming'){
+        setSwimming();
+    }
+    else{
+        setDriving();
     }
     var mapArray = document.getElementsByClassName('HUDMap');
     for(var mp = 0; mp < mapArray.length; mp++){
@@ -113,14 +119,5 @@ var moveMap = function(){
     myCurrentMap.style.backgroundPosition = (initialPosX)+'px ' + initialPosY + 'px';
 };
 
-function MouseWheelHandler(event)
-{
-    console.log(event);
-    // cross-browser wheel delta
-    var e = window.event || e; // old IE support
-    var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-    event.stopPropagation();
-    return false;
-}
-currentScene='driving';
+currentScene='swimming';
 setGame();
