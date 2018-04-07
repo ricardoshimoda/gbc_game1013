@@ -122,5 +122,5 @@ function MouseWheelHandler(event)
     event.stopPropagation();
     return false;
 }
-currentScene='driving';
+currentScene='swimming';
 setGame();
