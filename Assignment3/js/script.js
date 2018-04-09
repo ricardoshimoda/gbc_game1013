@@ -5,8 +5,8 @@ var previousScene = '';
 var currentScene = '';
 
 window.onload = function(){
-    showStartScreen();
-    //showAnyScreen('swimming');
+    //showStartScreen();
+    showAnyScreen('swimming');
 }
 
 var showAnyScreen = function(name){
