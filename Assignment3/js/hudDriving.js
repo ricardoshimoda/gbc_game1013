@@ -1,9 +1,20 @@
+var turretInterval = {};
+
 var setDriving = function(){
-    
+    turretInterval = setInterval(decreaseTemperature, 1000);
 };
 
 var unsetDriving = function(){
-    
+    clearInterval(turretInterval);    
+};
+
+var decreaseTemperature = function(){
+    if(playerCarTemperature > 0){
+        playerCarTemperature -= (Math.floor(Math.random() * 5 )+1);
+        if(playerCarTemperature < 0){
+            playerCarTemperature = 0;
+        }
+    }
 };
 
 var capturePlayerDrivingActions = function(keyCode){
@@ -37,6 +48,17 @@ var capturePlayerDrivingActions = function(keyCode){
         case 103:
             playerCarArmor = 100;
             playerCarHealth = 100;
+            return true;
+        case 84:
+        case 116:
+            if(playerCarTemperature > 100)
+            {
+                showPopUp('Too hot to shoot');
+            }
+            else{
+                showPopUp('shooting');
+                playerCarTemperature += Math.floor(Math.random() *40);
+            }
             return true;
     }
 }

@@ -127,7 +127,6 @@ var redrawControls = function(){
     var oxygenControls = document.getElementsByClassName('HUDOxygenBar');
     for(var ctrl = 0; ctrl < oxygenControls.length; ctrl++)
     {
-        console.log('oxygen level:' + playerOxygen);
         oxygenControls[ctrl].style.width = (1.7*playerOxygen) + 'px';
     }
     var moneyControls = document.getElementsByClassName('HUDMoneyContent');
@@ -142,11 +141,20 @@ var redrawControls = function(){
     }
     var gunControlShoot = document.getElementById('HUDWeaponAmmo');
     gunControlShoot.innerHTML = playerGun + ' / ' + playerMaxGun;
-    /*    
-    playerCarArmor = 100;
-    playerCarHealth = 100;
-    playerCarTemperature = 0;
-    playerGun = 20;*/
+
+    var turretTemperatureImage = 'img/HUDGauge/' + (Math.floor(playerCarTemperature / 10) * 10) + '.png';
+    if(playerCarTemperature >= 100){
+        turretTemperatureImage = 'img/HUDGauge/100.png'; 
+    }
+
+    var gaugeImage = document.getElementById('HUDEngineGauge');
+    gaugeImage.src = turretTemperatureImage;
+
+    var carArmorIndicator = document.getElementById('HUDArmorBar');
+    carArmorIndicator.style.width = (1.7*playerCarArmor) + 'px';
+
+    var carHealthIndicator = document.getElementById('HUDCarBar');
+    carHealthIndicator.style.width =(1.7*playerCarHealth) + 'px';
 }
 
 var goingPlaces = function(event){

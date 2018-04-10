@@ -1,10 +1,9 @@
 var swimmingInterval = {};
 var setSwimming = function(){
-    window.addEventListener('mousewheel',mouseWheelSwimmingHandler, true);    
+    window.addEventListener('mousewheel',mouseWheelSwimmingHandler, true);
     swimmingInterval = setInterval(decreaseOxygen, 1000);
 };
 var decreaseOxygen = function(){
-    console.log('decrese playerOxygen');
     playerOxygen -= (Math.floor(Math.random() * 5 )+1);
     if(playerOxygen <= 0){
         playerOxygen = 0;
@@ -14,7 +13,7 @@ var decreaseOxygen = function(){
 }
 
 var unsetSwimming = function(){
-    window.removeEventListener('mousewheel',mouseWheelSwimmingHandler);    
+    window.removeEventListener('mousewheel',mouseWheelSwimmingHandler);
     clearInterval(swimmingInterval);
 };
 
