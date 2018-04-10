@@ -1,27 +1,76 @@
 var setWalking = function(){
-    window.addEventListener('mousewheel',mouseWheelWalkingHandler, true);    
+
 }
 
 var unsetWalking = function(){
-    window.removeEventListener('mousewheel',mouseWheelWalkingHandler);    
 }
 
-function mouseWheelWalkingHandler(event)
+var weaponSelectionActive = false;
+var powerSelectionActive = false;
+
+function mouseWheelWalkingHandler(e)
 {
-    console.log(event);
-    // cross-browser wheel delta
-    var e = window.event || e; // old IE support
     var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-    event.stopPropagation();
+    if(weaponSelectionActive){
+        if(delta > 0){
+            playerWeaponSelected ++;
+        }
+        else{
+            playerWeaponSelected--;
+        }
+        if(playerWeaponSelected > 4){
+            playerWeaponSelected = 0;
+        }
+        else if(playerWeaponSelected < 0){
+            playerWeaponSelected = 4;
+        }
+    }
+    else if(powerSelectionActive){
+        if(delta > 0){
+            playerPowerSelected ++;
+        }
+        else{
+            playerPowerSelected--;
+        }
+        if(playerPowerSelected > 2){
+            playerPowerSelected = 0;
+        }
+        else if(playerPowerSelected < 0){
+            playerPowerSelected = 2;
+        }
+    }
+
+
     return false;
 }
 
+var captureOverlayLetGo = function(keyCode){
+    switch(keyCode){
+        case 84:
+        case 116:            
+            window.removeEventListener('mousewheel',mouseWheelWalkingHandler);    
+            var selectionAreas = document.getElementById('weaponOvershadow');
+            selectionAreas.style.display = 'none';
+            var weaponSelectionArea = document.getElementById('weaponPopUp');
+            weaponSelectionArea.style.display = 'none';
+            weaponSelectionActive = false;
+            return true;
+        case 86:
+        case 118:
+            powerSelectionActive = false;
+            window.removeEventListener('mousewheel',mouseWheelWalkingHandler);    
+            var selectionAreas = document.getElementById('weaponOvershadow');
+            selectionAreas.style.display = 'none';
+            var powerSelectionArea = document.getElementById('powerPopUp');
+            powerSelectionArea.style.display = 'none';            
+            return true;
+    }
+}
+
 var capturePlayerWalkingActions = function(keyCode){
-    console.log('keyCode pressed: ' + keyCode);
     switch(keyCode){
         case 72:
         case 104:
-            console.log('hurt player');
             /* Harm the Player randomly */
             playerHealth -= Math.floor(Math.random() * 9 + 1);
             if(playerHealth <= 0)
@@ -80,6 +129,24 @@ var capturePlayerWalkingActions = function(keyCode){
         case 97:
             playerGun = 20;
             showPopUp('Weapon fixed / reloaded');
+            return true;
+        case 84:
+        case 116:
+            weaponSelectionActive = true;
+            window.addEventListener('mousewheel',mouseWheelWalkingHandler, true);    
+            var selectionAreas = document.getElementById('weaponOvershadow');
+            selectionAreas.style.display = 'block';
+            var weaponSelectionArea = document.getElementById('weaponPopUp');
+            weaponSelectionArea.style.display = 'block';            
+            return true;
+        case 86:
+        case 118:
+            powerSelectionActive = true;
+            window.addEventListener('mousewheel',mouseWheelWalkingHandler, true);    
+            var selectionAreas = document.getElementById('weaponOvershadow');
+            selectionAreas.style.display = 'block';
+            var powerSelectionArea = document.getElementById('powerPopUp');
+            powerSelectionArea.style.display = 'block';            
             return true;
        
     }

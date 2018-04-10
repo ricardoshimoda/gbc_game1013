@@ -79,7 +79,6 @@
     background-color: black;
     width:100px;
     height:40px;
-    background-image: url(../img/PowerIce.png);
     background-size:cover;
 }
 
@@ -213,4 +212,34 @@
     top:22px;
     width:170px;
     height:27px;        
+}
+
+#weaponOvershadow{
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+#weaponPopUp{
+    width:760px;
+    height:110px;
+    z-index: 200;
+    margin-left:auto;
+    margin-right:auto;
+    position: relative;
+    margin-top:100px;
+    display:none;
+}
+#powerPopUp{
+    width:460px;
+    height:60px;
+    z-index: 200;
+    margin-left:auto;
+    margin-right:auto;
+    position: relative;
+    margin-top:100px;
+    display:none;    
 }

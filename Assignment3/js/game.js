@@ -19,6 +19,8 @@ var playerMoney = 2000.00;
 var playerXP = 10638;
 var playerLevel = 0;
 var playerGun = 20;
+var playerWeaponSelected = 4;
+var playerPowerSelected = 0;
 
 var playerMaxGun = 20;
 var XPLevels = [
@@ -36,6 +38,7 @@ var resetPlayerValues = function(){
     playerXP = 10638;
     playerLevel = 0;
     playerGun = 20;
+    weaponSelected = 4;
 };
 
 var capturePageTransitions = function(keyCode){
@@ -155,6 +158,31 @@ var redrawControls = function(){
 
     var carHealthIndicator = document.getElementById('HUDCarBar');
     carHealthIndicator.style.width =(1.7*playerCarHealth) + 'px';
+
+    var weaponOverlays = document.getElementsByClassName('selectedItemOverlay');
+    for(var ctrl = 0; ctrl < weaponOverlays.length; ctrl++)
+    {
+        weaponOverlays[ctrl].style.display='none';
+    }
+    var selectedWeaponOverlay = document.getElementById('weaponSelectedOverlay_' + playerWeaponSelected);
+    selectedWeaponOverlay.style.display='block';
+    var selectedWeaponHUD = document.getElementById('HUDWeaponImage');
+    selectedWeaponHUD.style.backgroundImage = 'url(img/I' + playerWeaponSelected + '.png)';
+
+    
+    var powerOverlays = document.getElementsByClassName('selectedPowerOverlay');
+    for(var ctrl = 0; ctrl < powerOverlays.length; ctrl++)
+    {
+        powerOverlays[ctrl].style.display='none';
+    }
+    var selectedPowerOverlay = document.getElementById('powerSelectedOverlay_' + playerPowerSelected);
+    selectedPowerOverlay.style.display='block';
+    var selectedPowerHUDs = document.getElementsByClassName('HUDSpell');
+    for(var ctrl = 0; ctrl < selectedPowerHUDs.length; ctrl++)
+    {
+        selectedPowerHUDs[ctrl].style.backgroundImage = 'url(img/P' + playerPowerSelected + '.png)';
+    }
+    
 }
 
 var goingPlaces = function(event){
@@ -174,7 +202,7 @@ var goingPlaces = function(event){
     else{
         capturePlayerDrivingActions(event.keyCode);
     }
-    event.stopPropagation();
+    event.preventDefault();
 }
 
 var stopMovingMap = function(event){
@@ -183,19 +211,25 @@ var stopMovingMap = function(event){
         /* Setting up the variables that move the map */
         case 37: // GOING LEFT
             goingLeft = false;
-            break;
+            return;
         case 38: // GOING UP
             goingUp = false;
-            break;
+            return;
         case 39: // GOING RIGHT
             goingRight = false;
-            break;
+            return;
         case 40: // GOING DOWN
             goingDown = false;
-            break;
-        
+            return;        
     }
-    event.stopPropagation();
+    if(currentScene == 'game')
+    {
+        captureOverlayLetGo(event.keyCode);
+    }
+    else if(currentScene == 'swimming'){
+        captureOverlaySwimmingLetGo(event.keyCode);
+    }
+    event.preventDefault();
 };
 
 var unsetGame = function(){

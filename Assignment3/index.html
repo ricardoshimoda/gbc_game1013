@@ -35,6 +35,48 @@
             </div>
         </div>  
     </div>
+    <div id="weaponOvershadow">
+        <div id="weaponPopUp">
+            <div id="weaponChoice" class="powerLine charGalleryEnhanced">
+                <div class="powerGalleryItem item" itemId="0">
+                    <div id="weaponSelectedOverlay_0" class="selectedItemOverlay"></div>
+                    <img src="img/I0.png" class="inventoryGallery"  />
+                </div>
+                <div class="powerGalleryItem item" itemId="1">
+                    <div id="weaponSelectedOverlay_1" class="selectedItemOverlay"></div>
+                    <img src="img/I1.png" class="inventoryGallery"  />
+                </div>
+                <div class="powerGalleryItem item" itemId="2">
+                    <div id="weaponSelectedOverlay_2" class="selectedItemOverlay"></div>
+                    <img src="img/I2.png" class="inventoryGallery"  />
+                </div>
+                <div class="powerGalleryItem item" itemId="3">
+                    <div id="weaponSelectedOverlay_3" class="selectedItemOverlay"></div>
+                    <img src="img/I3.png" class="inventoryGallery"  />
+                </div>
+                <div class="powerGalleryItem item" itemId="4">
+                    <div id="weaponSelectedOverlay_4" class="selectedItemOverlay"></div>
+                    <img src="img/I4.png" class="inventoryGallery"  />
+                </div>
+            </div>
+        </div>
+        <div id="powerPopUp">
+            <div id="weaponChoice" class="powerLine charGalleryEnhanced">
+                <div class="powerGalleryItem item" itemId="0">
+                    <div id="powerSelectedOverlay_0" class="selectedPowerOverlay"></div>
+                    <img src="img/P0.png" class="powerInventoryGallery"  />
+                </div>
+                <div class="powerGalleryItem item" itemId="1">
+                    <div id="powerSelectedOverlay_1" class="selectedPowerOverlay"></div>
+                    <img src="img/P1.png" class="powerInventoryGallery"  />
+                </div>
+                <div class="powerGalleryItem item" itemId="2">
+                    <div id="powerSelectedOverlay_2" class="selectedPowerOverlay"></div>
+                    <img src="img/P2.png" class="powerInventoryGallery"  />
+                </div>
+            </div>
+        </div>
+    </div>    
     <div class="container">
         <div id="start" class="loading page">
             <div id="topleftlogo" class="topleftlogo">
@@ -1059,7 +1101,7 @@ Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ult
                     </div>
                 </div>
                 <div class="HUDWeapon">
-                    <div class="HUDWeaponImage" >
+                    <div id="HUDWeaponImage" class="HUDWeaponImage" >
                     </div>
                     <div id="HUDWeaponAmmo" class="HUDWeaponAmmo">
                     </div>                    
@@ -1116,8 +1158,12 @@ Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ult
                             <li>m or M to use money</li>
                             <li>e or E to earn stuff</li>
                             <li>x or X to complete a mission</li>
-                            <li>mousewheelscroll to activate Weapon Scroll</li>
-                            <li>shift+mousewheelscroll to activate Spell Scroll</li>
+                        </ul>
+                        Press and Hold:
+                        <ul>
+                            <li>t or T to show Weapon Selection</li>
+                            <li>v or V to show Spell Selection</li>
+                            <li>mousewheel to select (weapon or spell)</li>
                         </ul>
                     </div>
                 </div>
@@ -1188,7 +1234,11 @@ Vestibulum efficitur eu dolor vitae volutpat. Vestibulum lobortis aliquet mi ult
                             <li>z or Z to use a mana potion</li>
                             <li>e or E to earn stuff</li>
                             <li>x or X to complete a mission</li>
-                            <li>shift+mousewheelscroll to activate Spell Scroll</li>
+                        </ul>
+                        Press and Hold:
+                        <ul>
+                            <li>v or V to show Spell Selection</li>
+                            <li>mousewheel to select spell</li>
                         </ul>
                     </div>
                 </div>

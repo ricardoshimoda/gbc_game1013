@@ -1,6 +1,5 @@
 var swimmingInterval = {};
 var setSwimming = function(){
-    window.addEventListener('mousewheel',mouseWheelSwimmingHandler, true);
     swimmingInterval = setInterval(decreaseOxygen, 1000);
 };
 var decreaseOxygen = function(){
@@ -13,13 +12,22 @@ var decreaseOxygen = function(){
 }
 
 var unsetSwimming = function(){
-    window.removeEventListener('mousewheel',mouseWheelSwimmingHandler);
     clearInterval(swimmingInterval);
 };
 
-var mouseWheelSwimmingHandler = function(event){
-
-};
+var captureOverlaySwimmingLetGo = function(keyCode){
+    switch(keyCode){
+        case 86:
+        case 118:
+            powerSelectionActive = false;
+            window.removeEventListener('mousewheel',mouseWheelWalkingHandler);    
+            var selectionAreas = document.getElementById('weaponOvershadow');
+            selectionAreas.style.display = 'none';
+            var powerSelectionArea = document.getElementById('powerPopUp');
+            powerSelectionArea.style.display = 'none';            
+            return true;
+    }
+}
 
 var capturePlayerSwimmingActions = function(keyCode){
     switch(keyCode){
@@ -61,6 +69,15 @@ var capturePlayerSwimmingActions = function(keyCode){
             if(playerMana > 100){
                 playerMana = 100;
             }
+            return true;
+        case 86:
+        case 118:
+            powerSelectionActive = true;
+            window.addEventListener('mousewheel',mouseWheelWalkingHandler, true);    
+            var selectionAreas = document.getElementById('weaponOvershadow');
+            selectionAreas.style.display = 'block';
+            var powerSelectionArea = document.getElementById('powerPopUp');
+            powerSelectionArea.style.display = 'block';            
             return true;
     }
 }
