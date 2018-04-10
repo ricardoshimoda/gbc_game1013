@@ -21,6 +21,9 @@ var playerLevel = 0;
 var playerGun = 20;
 var playerWeaponSelected = 4;
 var playerPowerSelected = 0;
+var playerCurrentMission = 'Get Next Piece Of Clothing';
+
+var titleEventSet = false;
 
 var playerMaxGun = 20;
 var XPLevels = [
@@ -169,7 +172,6 @@ var redrawControls = function(){
     var selectedWeaponHUD = document.getElementById('HUDWeaponImage');
     selectedWeaponHUD.style.backgroundImage = 'url(img/I' + playerWeaponSelected + '.png)';
 
-    
     var powerOverlays = document.getElementsByClassName('selectedPowerOverlay');
     for(var ctrl = 0; ctrl < powerOverlays.length; ctrl++)
     {
@@ -181,6 +183,12 @@ var redrawControls = function(){
     for(var ctrl = 0; ctrl < selectedPowerHUDs.length; ctrl++)
     {
         selectedPowerHUDs[ctrl].style.backgroundImage = 'url(img/P' + playerPowerSelected + '.png)';
+    }
+
+    var missionBillboards = document.getElementsByClassName('HUDMissionHighlight');
+    for(var ctrl = 0; ctrl < missionBillboards.length; ctrl++)
+    {
+        missionBillboards[ctrl].innerHTML=playerCurrentMission;
     }
     
 }
@@ -250,6 +258,20 @@ var unsetGame = function(){
 
 
 var setGame = function(){
+    if(!titleEventSet){
+        titleEventSet = true;
+        var missionContainers = document.getElementsByClassName('HUDMissionContainer');
+        for(var ctrl = 0; ctrl < missionContainers.length; ctrl++)
+        {
+            missionContainers[ctrl].addEventListener('dblclick', function(){
+                var missionTitle = '';
+                while (missionTitle == ''){
+                    missionTitle = prompt("Please enter the new mission title", playerCurrentMission);
+                }
+                playerCurrentMission = missionTitle;
+            });
+        }
+        }
     /* every time we enter the game again we reset the player values */
     resetPlayerValues();
     window.addEventListener('keydown',goingPlaces, true);
@@ -292,5 +314,3 @@ var moveMap = function(){
     myCurrentMap.style.backgroundPosition = (initialPosX)+'px ' + initialPosY + 'px';
 };
 
-currentScene='game';
-setGame();

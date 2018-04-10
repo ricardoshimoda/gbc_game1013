@@ -25,8 +25,8 @@ var showPopUp = function(msgInABottle){
 window.onload = function(){
     var btnPopper = document.getElementById('btnPop');
     btnPopper.addEventListener('click',hidePopUp);
-    //showStartScreen();
-    showAnyScreen('game');
+    showStartScreen();
+    //showAnyScreen('game');
 }
 
 var showAnyScreen = function(name){
