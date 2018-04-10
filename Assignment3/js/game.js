@@ -1,12 +1,14 @@
+
+var mapInterval = {};
 var goingUp = false;
 var goingDown = false;
 var goingLeft = false;
 var goingRight = false;
-var mapInterval = {};
 var initialPosX = 10;
 var initialPosY = 10;
 var skip = 20;
 
+var hudInterval = {};
 var playerHealth = 100;
 var playerMana = 100;
 var playerOxygen = 100;
@@ -16,26 +18,48 @@ var playerCarTemperature = 0;
 var playerMoney = 2000.00;
 var playerXP = 10638;
 var playerLevel = 0;
+var playerGun = 20;
+
+var playerMaxGun = 20;
 var XPLevels = [
     100000, 200000, 300000, 400000, 500000, 750000, 1000000
 ];
+
+var resetPlayerValues = function(){
+    playerHealth = 100;
+    playerMana = 100;
+    playerOxygen = 100;
+    playerCarArmor = 100;
+    playerCarHealth = 100;
+    playerCarTemperature = 0;
+    playerMoney = 2000.00;
+    playerXP = 10638;
+    playerLevel = 0;
+    playerGun = 20;
+};
 
 var capturePageTransitions = function(keyCode){
     switch(keyCode){
         case 68:
         case 100: // DRIVING
-            if(currentScene != 'driving')
-                transitionScene(currentScene, 'driving');
+            if(currentScene != 'driving'){
+                unsetGame();
+                transitionScene(currentScene, 'driving', false, setGame);
+            }
             return true;
         case 83:
         case 115: // SWIMMING
-            if(currentScene != 'swimming')
-                transitionScene(currentScene, 'swimming');
+            if(currentScene != 'swimming'){
+                unsetGame();
+                transitionScene(currentScene, 'swimming', false, setGame);
+            }
             return true;
         case 87:
         case 119: // WALKING
-            if(currentScene != 'game')
-                transitionScene(currentScene, 'game');
+            if(currentScene != 'game'){
+                unsetGame();
+                transitionScene(currentScene, 'game', false, setGame);
+            }
             return true;
         case 80:
         case 112: // PAUSE MENU
@@ -75,17 +99,54 @@ var capturePlayerCommonActions = function(keyCode){
     switch(keyCode){
         case 69:
         case 101: 
-            playerMoney += (Math.random() * 5000 + 5000);
+            playerMoney += (Math.random() * 75);
             return true;
         case 88:
         case 120:
-            playerXP += Math.floor(Math.random() * 50000 ) + 50000;
+            playerXP += Math.floor(Math.random() * 7500 );
+            if(playerXP > XPLevels[playerLevel]){
+                playerXP = 0;
+                playerLevel++;
+            }
             return true;        
     }
+    return false;
 }
 
 var redrawControls = function(){
-
+    var healthControls = document.getElementsByClassName('HUDHealthBar');
+    for(var ctrl = 0; ctrl < healthControls.length; ctrl++)
+    {
+        healthControls[ctrl].style.width = (1.7*playerHealth) + 'px';
+    }
+    var manaControls = document.getElementsByClassName('HUDPowerBar');
+    for(var ctrl = 0; ctrl < manaControls.length; ctrl++)
+    {
+        manaControls[ctrl].style.width = (1.7*playerMana) + 'px';
+    }
+    var oxygenControls = document.getElementsByClassName('HUDOxygenBar');
+    for(var ctrl = 0; ctrl < oxygenControls.length; ctrl++)
+    {
+        console.log('oxygen level:' + playerOxygen);
+        oxygenControls[ctrl].style.width = (1.7*playerOxygen) + 'px';
+    }
+    var moneyControls = document.getElementsByClassName('HUDMoneyContent');
+    for(var ctrl = 0; ctrl < moneyControls.length; ctrl++)
+    {
+        moneyControls[ctrl].innerHTML = '$' + playerMoney.toFixed(2);
+    }
+    var xpControls = document.getElementsByClassName('HUDXPContent');
+    for(var ctrl = 0; ctrl < xpControls.length; ctrl++)
+    {
+        xpControls[ctrl].innerHTML = playerXP + ' / ' + XPLevels[playerLevel];
+    }
+    var gunControlShoot = document.getElementById('HUDWeaponAmmo');
+    gunControlShoot.innerHTML = playerGun + ' / ' + playerMaxGun;
+    /*    
+    playerCarArmor = 100;
+    playerCarHealth = 100;
+    playerCarTemperature = 0;
+    playerGun = 20;*/
 }
 
 var goingPlaces = function(event){
@@ -97,15 +158,14 @@ var goingPlaces = function(event){
         return;
     /* Actions that depend on the game scene */
     if(currentScene == 'game'){
-        capturePlayerWalkingActions();
+        capturePlayerWalkingActions(event.keyCode);
     }
     else if(currentScene == 'swimming'){
-        capturePlayerSwimmingActions();
+        capturePlayerSwimmingActions(event.keyCode);
     }
     else{
-        capturePlayerDrivingActions();
+        capturePlayerDrivingActions(event.keyCode);
     }
-    redrawControls();
     event.stopPropagation();
 }
 
@@ -134,6 +194,7 @@ var unsetGame = function(){
     window.removeEventListener('keydown',goingPlaces);
     window.addEventListener('keyup',stopMovingMap);
     clearInterval(mapInterval);
+    clearInterval(hudInterval);
     if(currentScene == 'game'){
         unsetWalking();
     }
@@ -147,6 +208,8 @@ var unsetGame = function(){
 
 
 var setGame = function(){
+    /* every time we enter the game again we reset the player values */
+    resetPlayerValues();
     window.addEventListener('keydown',goingPlaces, true);
     window.addEventListener('keyup',stopMovingMap, true);
     if(currentScene == 'game'){
@@ -166,6 +229,7 @@ var setGame = function(){
     var myCurrentMap = document.getElementById(currentScene + 'Map');
     myCurrentMap.style.backgroundPosition = (initialPosX)+'px ' + initialPosY + 'px';
     mapInterval = setInterval(moveMap, 100);
+    hudInterval = setInterval(redrawControls, 500);
 };
 
 var moveMap = function(){
@@ -186,5 +250,5 @@ var moveMap = function(){
     myCurrentMap.style.backgroundPosition = (initialPosX)+'px ' + initialPosY + 'px';
 };
 
-currentScene='swimming';
+currentScene='game';
 setGame();

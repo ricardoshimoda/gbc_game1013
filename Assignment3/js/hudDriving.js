@@ -38,11 +38,5 @@ var capturePlayerDrivingActions = function(keyCode){
             playerCarArmor = 100;
             playerCarHealth = 100;
             return true;
-        /*
-        case 80:
-        case 112:
-            playerMana += 10; // Always fixed value for mana replenishment
-            return true;*/
-       
     }
 }

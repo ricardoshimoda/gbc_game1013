@@ -133,3 +133,43 @@ button:disabled{
     background: #343F4B;
     cursor: pointer;
 }
+
+#overshadow{
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+#popup{
+    background-image: url('../img/Panel.png');
+    background-size:cover;
+    width:350px;
+    height:240px;
+    z-index: 200;
+    margin-left:auto;
+    margin-right:auto;
+    position: relative;
+    margin-top:100px;    
+}
+
+#poptext{
+    padding-top: 30px;
+    margin-left: 40px;
+    font-family: chewy;
+    font-size: 25px;
+    color: #343F4B;
+    width:270px;
+    position:relative;
+    text-align: center;
+}
+.btnLayerPop{
+    position:absolute;
+    top:140px;
+    width:100%;
+}
+#btnPop{
+    font-size:20px !important;
+}

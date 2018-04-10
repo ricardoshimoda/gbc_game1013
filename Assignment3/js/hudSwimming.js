@@ -4,17 +4,22 @@ var setSwimming = function(){
     swimmingInterval = setInterval(decreaseOxygen, 1000);
 };
 var decreaseOxygen = function(){
-    initialOxygen
+    console.log('decrese playerOxygen');
+    playerOxygen -= 5;
+    if(playerOxygen == 0){
+        unsetGame();
+        transitionScene(currentScene, 'death');
+    }
 }
 
 var unsetSwimming = function(){
     window.removeEventListener('mousewheel',mouseWheelSwimmingHandler);    
-
+    clearInterval(swimmingInterval);
 };
 
 var mouseWheelSwimmingHandler = function(event){
 
-} ;
+};
 
 var capturePlayerSwimmingActions = function(keyCode){
     switch(keyCode){
@@ -48,8 +53,8 @@ var capturePlayerSwimmingActions = function(keyCode){
                 // say that invocation failed
             }
             return true;
-        case 80:
-        case 112:
+        case 90:
+        case 122:
             playerMana += 10; // Always fixed value for mana replenishment
             if(playerMana > 100){
                 playerMana = 100;

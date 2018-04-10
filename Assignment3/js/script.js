@@ -4,9 +4,29 @@ const step =10;
 var previousScene = '';
 var currentScene = '';
 
+var popTimeout = {};
+
+var hidePopUp= function(){
+    var popMessageHolder = document.getElementById('popRealText');
+    popMessageHolder.innerHTML = '';
+    var topOfThePops = document.getElementById('overshadow');
+    topOfThePops.style.display = 'none';
+    clearTimeout(popTimeout);
+};
+
+var showPopUp = function(msgInABottle){
+    var popMessageHolder = document.getElementById('popRealText');
+    popMessageHolder.innerHTML = msgInABottle;
+    var topOfThePops = document.getElementById('overshadow');
+    topOfThePops.style.display = 'block';
+    popTimeout = setTimeout(hidePopUp, 5000);
+};
+
 window.onload = function(){
+    var btnPopper = document.getElementById('btnPop');
+    btnPopper.addEventListener('click',hidePopUp);
     //showStartScreen();
-    showAnyScreen('swimming');
+    showAnyScreen('game');
 }
 
 var showAnyScreen = function(name){

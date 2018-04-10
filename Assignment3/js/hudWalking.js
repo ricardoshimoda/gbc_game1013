@@ -17,9 +17,11 @@ function mouseWheelWalkingHandler(event)
 }
 
 var capturePlayerWalkingActions = function(keyCode){
+    console.log('keyCode pressed: ' + keyCode);
     switch(keyCode){
         case 72:
         case 104:
+            console.log('hurt player');
             /* Harm the Player randomly */
             playerHealth -= Math.floor(Math.random() * 9 + 1);
             if(playerHealth <= 0)
@@ -39,13 +41,15 @@ var capturePlayerWalkingActions = function(keyCode){
         case 99:
             if (playerMana >= 10){
                 playerMana -= 10; // Always fixed value for mana usage
+                showPopUp('Power Deployed');
             }
             else{
-                // say that invocation failed
+                console.log('where is this pop-up!');
+                showPopUp('No more mana - fail');
             }
             return true;
-        case 80:
-        case 112:
+        case 90:
+        case 122:
             playerMana += 10; // Always fixed value for mana replenishment
             if(playerMana > 100){
                 playerMana = 100;
@@ -53,13 +57,29 @@ var capturePlayerWalkingActions = function(keyCode){
             return true;
         case 77:
         case 109:
-            var expenses = math.random()*100 + 50;
+            var expenses = Math.random()*100 + 50;
             if(playerMoney < expenses){
-                // Sorry - you can't buy this item
+                showPopUp('You can\'t buy this: $' + expenses.toFixed(2));
             }
             else{
-                player -= expenses;
+                playerMoney -= expenses;
+                showPopUp('You just bought: $' + expenses.toFixed(2));
             }
+            return true;
+        case 81:
+        case 113:
+            if(playerGun > 0){
+                playerGun--;
+                showPopUp('You used your weapon ');
+            }
+            else{
+                showPopUp('Fix / reload your weapon ');
+            }
+            return true;
+        case 65:
+        case 97:
+            playerGun = 20;
+            showPopUp('Weapon fixed / reloaded');
             return true;
        
     }
