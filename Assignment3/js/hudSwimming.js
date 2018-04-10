@@ -5,8 +5,9 @@ var setSwimming = function(){
 };
 var decreaseOxygen = function(){
     console.log('decrese playerOxygen');
-    playerOxygen -= 5;
-    if(playerOxygen == 0){
+    playerOxygen -= (Math.floor(Math.random() * 5 )+1);
+    if(playerOxygen <= 0){
+        playerOxygen = 0;
         unsetGame();
         transitionScene(currentScene, 'death');
     }
@@ -48,9 +49,11 @@ var capturePlayerSwimmingActions = function(keyCode){
         case 99:
             if (playerMana >= 10){
                 playerMana -= 10; // Always fixed value for mana usage
+                showPopUp('Power Deployed');
             }
             else{
-                // say that invocation failed
+                console.log('where is this pop-up!');
+                showPopUp('No more mana - fail');
             }
             return true;
         case 90:
@@ -60,7 +63,5 @@ var capturePlayerSwimmingActions = function(keyCode){
                 playerMana = 100;
             }
             return true;
-
-       
     }
 }
